@@ -20,6 +20,7 @@ class CreateReponseTable extends Migration
             $table->string('id_tondeur');                           /* ID tondeur */
             $table->date('date_reponse');                           /* Date de reponse */
             $table->string('etat');                                /* Etat */
+            $table->timestamps();
         });
     }
 

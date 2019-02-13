@@ -23,6 +23,7 @@ class CreateDemandeTable extends Migration
             $table->char('surface');                       /* Surface a tondre */
             $table->char('prix');                          /* Surface a tondre */
             $table->char('img')->nullable();                                    /* url de l'image */
+            $table->timestamps();
         });
     }
 

@@ -166,8 +166,9 @@
             <div class="form-group row">
 
                 <div class="col-md-6">
-                    <input id="role_tondu" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="{{ old('role') }}"> <label for="role_tondu" class="col-md-4 col-form-label text-md-right">{{ __('Tondu') }}</label>
-                    <input id="role_tondeur" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="{{ old('role') }}"> <label for="role_tondeur" class="col-md-4 col-form-label text-md-right">{{ __('Tondeur') }}</label>
+                    <input id="role_tondu" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="tondu"> <label for="role_tondu" class="col-md-4 col-form-label text-md-right">{{ __('Tondu') }}</label>
+                    <input id="role_tondeur" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="tondeur"> <label for="role_tondeur" class="col-md-4 col-form-label text-md-right">{{ __('Tondeur') }}</label>
+
                 </div>
             </div>
             {{-- Fin role de l'utilisateur --}}

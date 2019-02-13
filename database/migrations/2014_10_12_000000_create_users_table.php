@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->string('role');                                 /* adresse 2 utilisateur */
             $table->string('grade')->nullable();                    /* adresse 2 utilisateur */
             $table->rememberToken();
+            $table->timestamps();
         });
     }
 

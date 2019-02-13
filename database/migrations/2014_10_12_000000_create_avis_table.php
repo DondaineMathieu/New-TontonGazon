@@ -21,6 +21,7 @@ class CreateAvisTable extends Migration
             $table->char('titre', 50);                              /* Titre de l'avis : max 50 car */
             $table->char('texte', 255);                             /* Texte de l'avis : max 400 car */
             $table->char('note');                          
+            $table->timestamps();
         });
     }
 
