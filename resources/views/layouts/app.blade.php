@@ -18,13 +18,22 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="../../../public/css/style.css">
 </head>
 <body>
     <div id="app">
         <nav class="nav">
-            <div class="container">
-                
-            </div>
+            <ul>
+                <li id="nav-V-ann"><a href="#">Voir les annonces</a></li>
+                <li id="nav-P-ann"><a href="#">Publier une annonce</a></li>
+            @guest
+                <li id="nav-connect"><a href="{{ route('login') }}">Connexion</a></li>
+                <li id="nav-inscription"><a href="{{ route('register') }}">Inscription</a></li>
+            @else
+                <li id="nav-profil"><a href="#">Bonjour {{ Auth::user()->prenom }} </a></li>
+                <li id="nav-deconnect"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Deconnexion </a></li>
+            @endguest
+            <ul>
         </nav>
 
         <main class="py-4">
