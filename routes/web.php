@@ -11,8 +11,9 @@
 |
 */
 
-Route::get('/', 'MonControlleur@index');
+Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'MonControlleur@index');
+Route::get('utilisateur/{id}', 'MonControlleur@utilisateur')->where('id','[0-9]+');

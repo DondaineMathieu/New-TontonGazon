@@ -169,11 +169,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        TontonGazon\Providers\AppServiceProvider::class,
+        TontonGazon\Providers\AuthServiceProvider::class,
+        // TontonGazon\Providers\BroadcastServiceProvider::class,
+        TontonGazon\Providers\EventServiceProvider::class,
+        TontonGazon\Providers\RouteServiceProvider::class,
 
     ],
 
