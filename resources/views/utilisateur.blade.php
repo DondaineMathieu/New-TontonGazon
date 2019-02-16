@@ -2,6 +2,12 @@
 
 @section('content')
 
-<h1>Bonjour {{$utilisateur ->nom}} {{$utilisateur ->prenom}} </h1>
+@if(Auth::id() != $utilisateur->id)
+    <h1>Vous êtes sur le profil de : {{$utilisateur ->nom}} {{$utilisateur ->prenom}} </h1>
+@else
+    <h1>Vous etes sur votre profil </h1>
+    @include("_utilisateurs-top")
+    @include("_utilisateurs-options")
+@endif
 
 @endsection

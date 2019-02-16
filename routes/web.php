@@ -16,4 +16,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
 Route::get('/', 'MonControlleur@index');
-Route::get('utilisateur/{id}', 'MonControlleur@utilisateur')->where('id','[0-9]+');
+Route::get('/utilisateur/{id}', 'MonControlleur@utilisateur')->where('id','[0-9]+');
+Route::get('/annonces', 'MonControlleur@annonces');
+Route::get('/annonce/{id}', 'MonControlleur@annonce');

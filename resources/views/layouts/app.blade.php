@@ -17,19 +17,19 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link href="{{ asset('publi/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <nav class="nav">
             <ul>
-                <li id="nav-V-ann"><a href="#">Voir les annonces</a></li>
+                <li id="nav-V-ann"><a href="/annonces/">Voir les annonces</a></li>
                 <li id="nav-P-ann"><a href="#">Publier une annonce</a></li>
             @guest
                 <li id="nav-connect"><a href="{{ route('login') }}">Connexion</a></li>
                 <li id="nav-inscription"><a href="{{ route('register') }}">Inscription</a></li>
             @else
-                <li id="nav-profil"><a href="#">Bonjour {{ Auth::user()->prenom }} </a></li>
+                <li id="nav-profil">Bonjour <a href="/utilisateur/{{ Auth::user()->id }}"> {{ Auth::user()->prenom }} </a></li>
                 <li id="nav-deconnect"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Deconnexion </a></li>
             @endguest
             <ul>

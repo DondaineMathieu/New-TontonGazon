@@ -3,7 +3,8 @@
 namespace TontonGazon\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use TontonGazon\User;
+use TontonGazon\Demande;
 use Illuminate\Support\Facades\Auth;
 
 class MonControlleur extends Controller
@@ -17,5 +18,17 @@ class MonControlleur extends Controller
         if($utilisateur == false) {
             return abort(404);
         } return view('utilisateur',['utilisateur' => $utilisateur]);
+    }
+
+    public function annonces() {
+        $annonces = Demande::all();
+        return view('annonces',['annonces' => $annonces]);
+    }
+
+    public function annonce($id) {
+        $annonce = Demande::find($id);
+        if($annonce == false) {
+            return abort(404);
+        }return view('annonce',['annonce' => $annonce]);
     }
 }
