@@ -1,6 +1,6 @@
 <section id="profil-top">
     <div id="profil-photo">
-        <img src="" alt="Photo de profil de :" />
+    <img src="" alt="Photo de profil de : {{$utilisateur ->nom}} {{$utilisateur ->prenom}}" />
     </div>
     <div id="profil-global">
         <h1>Nom et prénom de l'utilisateur</h1>
@@ -14,11 +14,11 @@
         </div>
         <nav id="profil-nav">
             <ul>
-                <li> <a href=""> Demandes </a> </li>
-                <li> <a href=""> Messages </a> </li>
-                <li> <a href=""> Alertes </a> </li>
-                <li> <a href=""> Profil </a> </li>
-                <li> <a href=""> Argents </a> </li>
+                <li> <a href="demandes"> Demandes </a> </li>
+                <li> <a href="messages"> Messages </a> </li>
+                <li> <a href="alertes"> Alertes </a> </li>
+                <li> <a href="profil"> Profil </a> </li>
+                <li> <a href="argent"> Argent</a> </li>
             </ul>
         </nav>
     </div>
