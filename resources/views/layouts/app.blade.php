@@ -18,13 +18,14 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
         <nav class="nav">
             <ul>
-                <li id="nav-V-ann"><a href="/annonces/">Voir les annonces</a></li>
-                <li id="nav-P-ann"><a href="#">Publier une annonce</a></li>
+                <li id="nav-V-ann"><a href="/annonces">Voir les annonces</a></li>
+                <li id="nav-P-ann"><a href="/creer-annonce">Publier une annonce</a></li>
             @guest
                 <li id="nav-connect"><a href="{{ route('login') }}">Connexion</a></li>
                 <li id="nav-inscription"><a href="{{ route('register') }}">Inscription</a></li>
@@ -39,5 +40,6 @@
             @yield('content')
         </main>
     </div>
+    @include('Elements/_footer')
 </body>
 </html>

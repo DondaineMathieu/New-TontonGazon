@@ -31,4 +31,9 @@ class MonControlleur extends Controller
             return abort(404);
         }return view('annonce',['annonce' => $annonce]);
     }
+
+    public function creerAnnonce() {
+        return view('creer_annonce');
+    }
+
 }

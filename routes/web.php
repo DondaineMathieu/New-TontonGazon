@@ -19,3 +19,5 @@ Route::get('/', 'MonControlleur@index');
 Route::get('/utilisateur/{id}', 'MonControlleur@utilisateur')->where('id','[0-9]+');
 Route::get('/annonces', 'MonControlleur@annonces');
 Route::get('/annonce/{id}', 'MonControlleur@annonce');
+Route::get('/creer-annonce', 'MonControlleur@creerAnnonce')->name('creerAnnonce');
+

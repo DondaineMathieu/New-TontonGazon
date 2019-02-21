@@ -1,0 +1,55 @@
+/* CSS pour PC (en dessous) */
+nav.nav {
+    background-color:green;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        
+    }
+
+    button {
+        display: none !important;
+    }
+
+    ul {
+        display: flex;
+        list-style-type: none;
+        margin-top:7px;
+        margin-bottom:7px;
+        li#nav-V-ann {}
+        li#nav-P-ann {}
+        li#nav-connect {}
+        li#nav-inscription {}
+        li#nav-profil {}
+        li#nav-deconnect {}
+
+        li {
+            margin-right:14px;
+            a{
+                color:white;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* CSS pour mobile */
+@media screen and (max-width: 640px) { 
+  header {
+      flex-direction: column !important;
+    button {
+      display: inline-block !important;
+    }
+    nav {
+      ul {
+        flex-direction: column !important;
+        li {
+            margin-left:auto;
+            margin-right:auto;
+            padding:7px;
+        }
+      }
+    }
+  }  
+}
