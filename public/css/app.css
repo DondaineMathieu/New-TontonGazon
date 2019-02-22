@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 /* CSS pour PC (en dessous) */
 nav.nav {
-  background-color: green;
+  background-color: #468a3f;
   display: flex;
-  justify-content: space-between; }
+  justify-content: flex-end;
+  font-family: sans-serif; }
   nav.nav button {
     display: none !important; }
   nav.nav ul {
@@ -12,6 +13,7 @@ nav.nav {
     margin-top: 7px;
     margin-bottom: 7px; }
     nav.nav ul li {
+      color: white;
       margin-right: 14px; }
       nav.nav ul li a {
         color: white;
@@ -30,110 +32,58 @@ nav.nav {
         margin-right: auto;
         padding: 7px; } }
 
-#footer {
-  background-color: green;
+footer {
+  color: white;
+  background-color: #468a3f;
+  font-family: "Aileron", sans-serif;
+  text-align: center;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 40px;
-  grid-template-areas: "tb1 tb2 tb3 tb4" "tb1 tb2 tb3 tb5"; }
-
-#footer {
-  font-family: "BrokenChalk","Arial", sans-serif; }
-  #footer div ul li {
-    line-height: 1.4; }
-
-#footer-col-1 {
-  text-align: center;
-  text-decoration: none;
-  grid-area: tb1;
-  padding-left: 50px;
-  padding-top: 25px; }
-
-#footer-col-1 ul li {
-  list-style-type: none; }
-
-#footer-col-1 ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.8rem; }
-
-#footer-col-2 {
-  text-align: center;
-  text-decoration: none;
-  grid-area: tb2;
-  padding-top: 25px; }
-
-#footer-col-2 ul li {
-  list-style-type: none; }
-
-#footer-col-2 ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.8rem; }
-
-#footer-col-3 {
-  text-align: center;
-  text-decoration: none;
-  grid-area: tb3;
-  padding-top: 25px;
-  padding-bottom: 20px; }
-
-#footer-col-3 ul li {
-  list-style-type: none; }
-
-#footer-col-3 ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.8rem; }
-
-#footer-col-4 {
-  text-align: center;
-  text-decoration: none;
-  grid-area: tb4;
-  padding-top: 25px; }
-
-#footer-col-4 ul li {
-  list-style-type: none; }
-
-#footer-col-4 ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.8rem; }
-
-#footer-col-5 {
-  text-align: center;
-  text-decoration: none;
-  grid-area: tb5;
-  margin-top: -85px; }
-
-#footer-col-5 ul li {
-  list-style-type: none; }
-
-#footer-col-5 ul li a {
-  text-decoration: none;
-  color: white;
-  font-size: 0.8rem; }
-
-.titrefooter {
-  font-size: 1.2rem;
-  line-height: 2;
-  color: white; }
-
-#footer-mail {
-  padding: 5px;
-  border-radius: 5px;
-  border: none; }
-
-#footer-submit {
-  background-color: darkgreen;
-  border: none;
-  padding: 6px;
-  margin-left: -5px;
-  border-radius: 5px; }
-
-#footer-envoie:hover {
-  background-color: darkolivegreen;
-  cursor: pointer; }
+  grid-gap: 2rem;
+  grid-template-areas: "f-c-1 f-c-2 f-c-3 f-c-4" "f-c-1 f-c-2 f-c-3 f-c-5";
+  padding: 1.6rem; }
+  footer div input {
+    border: none;
+    padding: 0.6rem; }
+  footer div input#footer-mail {
+    background-color: white;
+    color: #666666;
+    border-bottom-left-radius: 15px;
+    border-top-left-radius: 15px;
+    width: 60%; }
+  footer div input#footer-submit {
+    background-color: #B8B8B8;
+    color: white;
+    border-bottom-right-radius: 15px;
+    border-top-right-radius: 15px;
+    width: 35%;
+    transition: background-color 0.4s; }
+  footer div input#footer-submit:hover {
+    transition: background-color 0.4s;
+    background-color: #666666;
+    cursor: pointer; }
+  footer div ul {
+    list-style-type: none; }
+    footer div ul li {
+      padding-bottom: 0.4rem; }
+      footer div ul li a {
+        color: white;
+        text-decoration: none; }
+    footer div ul li:first-child {
+      font-weight: bold;
+      padding-bottom: 1rem; }
+    footer div ul input {
+      display: flex; }
+  footer div#footer-col-1 {
+    grid-area: f-c-1; }
+  footer div#footer-col-2 {
+    grid-area: f-c-2; }
+  footer div#footer-col-3 {
+    grid-area: f-c-3; }
+  footer div#footer-col-4 {
+    grid-area: f-c-4; }
+  footer div#footer-col-5 {
+    grid-area: f-c-5; }
 
 @media screen and (max-width: 640px) {
   #footer {
@@ -141,28 +91,53 @@ nav.nav {
     display: inline-block;
     width: 100%; }
     #footer div {
-      padding-left: 0;
-      padding-right: 0;
-      padding-top: 0;
-      padding-bottom: 0;
+      padding: 0;
       margin-left: 0;
       margin-right: 0;
       margin-top: 0;
-      margin-bottom: 1rem; }
+      margin-bottom: 1.8rem; }
       #footer div input {
         margin-top: 0.4rem;
-        height: 3.5rem;
-        font-size: 1.4rem; }
+        height: 2.4rem;
+        font-size: 1.2rem; }
       #footer div #footer-mail {
         width: 50%;
         padding-left: 0.6rem; }
       #footer div #footer-submit {
         width: 30%; }
+      #footer div ul li {
+        margin-bottom: 0.56rem;
+        line-height: 1.2; }
       #footer div ul li a {
         font-size: 1.2rem; }
       #footer div ul li .titrefooter {
         font-size: 1.4rem; } }
 
+.form-container {
+  width: 70%;
+  padding: 2rem;
+  margin-right: auto;
+  margin-left: auto; }
+  .form-container h1 {
+    text-align: center; }
+  .form-container form {
+    display: flex;
+    flex-direction: column; }
+    .form-container form .form-group {
+      display: flex;
+      flex-direction: row; }
+      .form-container form .form-group label {
+        text-align: right;
+        margin-right: 16px;
+        flex: 0.4;
+        color: grey; }
+      .form-container form .form-group div {
+        flex: 0.6; }
+      .form-container form .form-group input {
+        width: 100%;
+        padding: 0.2rem; }
+
+/* CSS pour mobile */
 * {
   padding: 0;
   margin: 0;

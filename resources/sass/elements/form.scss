@@ -1,0 +1,32 @@
+.form-container {
+    width:70%;
+    padding:2rem;
+    margin-right: auto; margin-left: auto;
+    h1 {
+        text-align: center;
+    }
+    form {
+        display:flex;
+        flex-direction: column;
+        .form-group {
+            display: flex;
+            flex-direction: row;
+            label {
+                text-align: right;
+                margin-right:16px;
+                flex:0.4;
+                color: grey;
+            }
+            div{
+                flex:0.6;
+            }
+            input {
+                width:100%;
+                padding:0.2rem;
+            }
+        }
+    }
+}
+
+/* CSS pour mobile */
+@media screen and (max-width: 640px) { }

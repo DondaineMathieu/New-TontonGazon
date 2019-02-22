@@ -21,21 +21,8 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    @include('Elements/_header')
     <div id="app">
-        <nav class="nav">
-            <ul>
-                <li id="nav-V-ann"><a href="/annonces">Voir les annonces</a></li>
-                <li id="nav-P-ann"><a href="/creer-annonce">Publier une annonce</a></li>
-            @guest
-                <li id="nav-connect"><a href="{{ route('login') }}">Connexion</a></li>
-                <li id="nav-inscription"><a href="{{ route('register') }}">Inscription</a></li>
-            @else
-                <li id="nav-profil">Bonjour <a href="/utilisateur/{{ Auth::user()->id }}"> {{ Auth::user()->prenom }} </a></li>
-                <li id="nav-deconnect"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Deconnexion </a></li>
-            @endguest
-            <ul>
-        </nav>
-
         <main class="py-4">
             @yield('content')
         </main>
