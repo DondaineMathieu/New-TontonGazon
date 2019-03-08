@@ -92,7 +92,6 @@ class DatabaseSeeder extends Seeder
 
         DB::table('demande')->insert([
             'id_tondu' => "4",
-            'date_publi' => "2019-03-10",
             'date_tonte' => '2019-04-21',
             'titre' => 'Une premiere annonce de test',
             'texte' => 'spiritus miscere ad feris bella vehementer hac miscere adfligebat proruperunt est erigentes capiti Iconium peius capiti raris feris Namque inopinis raris motibus sunt adfligebat amphitheatrali motibus indignitate Isauri feris.',
@@ -101,7 +100,6 @@ class DatabaseSeeder extends Seeder
         ]);
         DB::table('demande')->insert([
             'id_tondu' => "3",
-            'date_publi' => "2019-02-11",
             'date_tonte' => '2019-03-19',
             'titre' => 'Une deuxieme annonce de test',
             'texte' => ' enim per quam per magis tributaria et piget dicere quam hausto aerarii est ordo deleto angustias repetetur et socio sunt populum facta angustias et hostiles hausto magis avide Ptolomaeo proscribi.',

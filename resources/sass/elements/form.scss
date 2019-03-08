@@ -4,6 +4,7 @@
     margin-right: auto; margin-left: auto;
     h1 {
         text-align: center;
+        margin-bottom: 1.6rem; 
     }
     form {
         display:flex;
@@ -11,18 +12,20 @@
         .form-group {
             display: flex;
             flex-direction: row;
+            margin-bottom:0.6rem;
             label {
                 text-align: right;
                 margin-right:16px;
                 flex:0.4;
                 color: grey;
+                padding-top:0.4rem;
             }
             div{
                 flex:0.6;
             }
             input {
                 width:100%;
-                padding:0.2rem;
+                padding:0.4rem;
             }
         }
     }

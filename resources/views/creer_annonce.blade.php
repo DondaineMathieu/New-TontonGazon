@@ -71,6 +71,11 @@
     </div>
     {{-- Fin Prix de l'annonce --}}
 
+    <div>
+        <label for="date_tonte" class="col-md-4 col-form-label text-md-right">{{ __('Date de la tonte') }}</label>
+        <input type="date" name="date_tonte"/>
+    </div>
+
     <div class="form-group row mb-0">
         <div class="col-md-6 offset-md-4">
             <button type="submit" class="btn btn-primary">

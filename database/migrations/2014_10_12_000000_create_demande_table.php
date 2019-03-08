@@ -16,7 +16,6 @@ class CreateDemandeTable extends Migration
         Schema::create('demande', function (Blueprint $table) {
             $table->increments('id');                               /* ID demande */
             $table->string('id_tondu');                             /* ID tondu */
-            $table->date('date_publi');                             /* Date de publication du poste */
             $table->date('date_tonte');                             /* Date de la tonte */
             $table->char('titre', 50);                              /* Titre de l'annonce : max 50 car */
             $table->char('texte', 255);                             /* Texte de l'annonce : max 400 car */
