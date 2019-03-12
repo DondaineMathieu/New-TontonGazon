@@ -46,8 +46,8 @@
             </label>
         </div>
 
-        <div class="form-login">
-            <button type="submit" class="btn btn-primary">
+        <div class="form-submit">
+            <button type="submit">
                 {{ __('C\'est parti !') }}
             </button>
         </div>

@@ -40,8 +40,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2rem;
-  grid-template-areas: "f-c-1 f-c-2 f-c-3 f-c-4"
- "f-c-1 f-c-2 f-c-3 f-c-5";
+  grid-template-areas: "f-c-1 f-c-2 f-c-3 f-c-4" "f-c-1 f-c-2 f-c-3 f-c-5";
   padding: 1.6rem; }
   footer div input {
     border: none;
@@ -148,10 +147,10 @@ footer {
       margin-right: auto; }
       .form-container form .form-remember label {
         margin-left: 16px; }
-    .form-container form .form-login {
+    .form-container form .form-submit {
       text-align: center;
       margin-top: 0.4rem; }
-      .form-container form .form-login button {
+      .form-container form .form-submit button {
         border: 1px solid grey;
         background-color: #468a3f;
         border-radius: 10px;
