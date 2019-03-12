@@ -4,22 +4,25 @@
   margin-right: auto;
   margin-left: auto; }
   .form-container h1 {
-    text-align: center; }
+    text-align: center;
+    margin-bottom: 1.6rem; }
   .form-container form {
     display: flex;
     flex-direction: column; }
     .form-container form .form-group {
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      margin-bottom: 0.6rem; }
       .form-container form .form-group label {
         text-align: right;
         margin-right: 16px;
         flex: 0.4;
-        color: grey; }
+        color: grey;
+        padding-top: 0.4rem; }
       .form-container form .form-group div {
         flex: 0.6; }
       .form-container form .form-group input {
         width: 100%;
-        padding: 0.2rem; }
+        padding: 0.4rem; }
 
 /* CSS pour mobile */
