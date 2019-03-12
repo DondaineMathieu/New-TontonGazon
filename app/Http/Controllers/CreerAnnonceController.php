@@ -4,40 +4,22 @@ namespace TontonGazon\Http\Controllers;
 
 use TontonGazon\Demande;
 use TontonGazon\Http\Controllers\Controller;
+use Illuminate\Http\Request; 
+use TontonGazon\User;
+use Illuminate\Support\Facades\Auth;
 
 class CreerAnnonceController extends Controller
 {
-
-    /**
-     * Rediriger l'utilisateur apres la creation de l'annonce.
-     *
-     * @var string
-     */
-    protected $redirectTo = '/annonces';
-
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+    protected function create(Request $request)
     {
-        $this->middleware('guest');
-    }
-    
-    /**
-     * Create a new user instance after a valid registration.
-     *
-     * @param  array  $data
-     * @return \TontonGazon\Demande
-     */
-    protected function create(array $data)
-    {
-        return Demande::create([
-            'titre' => $data['titre'],
-            'texte' => $data['texte'],
-            'surface' => $data['surface'],
-            'prix' => $data['prix'],
+        Demande::create([
+            'titre' => $request->input('titre'),
+            'texte' => $request->input('texte'),
+            'surface' => $request->input('surface'),
+            'prix' => $request->input('prix'),
+            'date_tonte' => $request->input('date_tonte'),
+            'id_tondu' => \Auth::user()->id,
         ]);
+        return view('home');
     }
 }

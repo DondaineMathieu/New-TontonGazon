@@ -37,28 +37,28 @@
             </div>
         </div>
 
-        <div class="form-group">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" name="remember" id="remember"
-                    {{ old('remember') ? 'checked' : '' }}>
+        <div class="form-remember">
+            <input class="form-check-input" type="checkbox" name="remember" id="remember"
+                {{ old('remember') ? 'checked' : '' }}>
 
-                <label class="form-check-label" for="remember">
-                    {{ __('Remember Me') }}
-                </label>
-            </div>
+            <label class="form-check-label" for="remember">
+                {{ __('Remember Me') }}
+            </label>
         </div>
 
-        <div class="form-group">
+        <div class="form-login">
             <button type="submit" class="btn btn-primary">
-                {{ __('Login') }}
+                {{ __('C\'est parti !') }}
             </button>
+        </div>
 
+        <div class="form-reset">
             @if (Route::has('password.request'))
             <a class="btn btn-link" href="{{ route('password.request') }}">
-                {{ __('Forgot Your Password?') }}
+                {{ __('Mot de passe oublié ?') }}
             </a>
             @endif
-        </div>
+        <div>
     </form>
 </div>
 @endsection

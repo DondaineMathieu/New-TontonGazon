@@ -40,7 +40,8 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 2rem;
-  grid-template-areas: "f-c-1 f-c-2 f-c-3 f-c-4" "f-c-1 f-c-2 f-c-3 f-c-5";
+  grid-template-areas: "f-c-1 f-c-2 f-c-3 f-c-4"
+ "f-c-1 f-c-2 f-c-3 f-c-5";
   padding: 1.6rem; }
   footer div input {
     border: none;
@@ -139,6 +140,34 @@ footer {
       .form-container form .form-group input {
         width: 100%;
         padding: 0.4rem; }
+    .form-container form .form-remember {
+      color: grey;
+      text-align: center;
+      display: inline-block;
+      margin-left: auto;
+      margin-right: auto; }
+      .form-container form .form-remember label {
+        margin-left: 16px; }
+    .form-container form .form-login {
+      text-align: center;
+      margin-top: 0.4rem; }
+      .form-container form .form-login button {
+        border: 1px solid grey;
+        background-color: #468a3f;
+        border-radius: 10px;
+        font-weight: bold;
+        color: white;
+        padding: 4% 7%;
+        transition: background-color 0.4s ease-out; }
+    .form-container form .form-reset {
+      text-align: center; }
+      .form-container form .form-reset a {
+        text-decoration: none;
+        padding-top: 0.4rem;
+        font-size: 0.8rem;
+        color: grey; }
+      .form-container form .form-reset a:hover {
+        text-decoration: underline; }
 
 /* CSS pour mobile */
 * {
