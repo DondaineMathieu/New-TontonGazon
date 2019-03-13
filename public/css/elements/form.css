@@ -19,8 +19,12 @@
         margin-right: 16px;
         flex: 0.2;
         color: grey;
-        padding-top: 0.4rem;
-        border-bottom: 1px solid grey; }
+        padding-top: 0.4rem; }
+        .form-container form .form-group label b {
+          font-weight: normal;
+          padding-bottom: 5px;
+          padding-left: 15px;
+          border-bottom: 1px solid grey; }
       .form-container form .form-group div {
         flex: 0.4; }
       .form-container form .form-group input {

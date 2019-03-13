@@ -8,7 +8,7 @@
         @csrf
 
         <div class="form-group">
-            <label for="email" class="form-label">{{ __('E-Mail Address') }}</label>
+            <label for="email" class="form-label"><b>{{ __('E-Mail Address') }}</b></label>
 
             <div class="form-group-input">
                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
@@ -23,7 +23,7 @@
         </div>
 
         <div class="form-group">
-            <label for="password" class="form-label">{{ __('Password') }}</label>
+            <label for="password" class="form-label"><b>{{ __('Password') }}</b></label>
 
             <div class="form-group-input">
                 <input id="password" type="password" placeholder="azerty123456"

@@ -8,7 +8,7 @@
             @csrf
             
             <div class="form-group">
-                <label for="nom" class="form-label">{{ __('Nom') }}</label>
+                <label for="nom" class="form-label"><b>{{ __('Nom') }}</b></label>
 
                 <div class="form-group-input">
                     <input id="nom" type="text" class="form-control{{ $errors->has('nom') ? ' is-invalid' : '' }}" 
@@ -23,7 +23,7 @@
             </div>
 
             <div class="form-group">
-                <label for="prenom" class="form-label">{{ __('Prenom') }}</label>
+                <label for="prenom" class="form-label"><b>{{ __('Prenom') }}</b></label>
 
                 <div class="form-group-input">
                     <input id="prenom" type="text" class="form-control{{ $errors->has('prenom') ? ' is-invalid' : '' }}" 
@@ -38,7 +38,7 @@
             </div>
 
             <div class="form-group">
-                <label for="email" class="form-label">{{ __('Adresse mail') }}</label>
+                <label for="email" class="form-label"><b>{{ __('Adresse mail') }}</b></label>
 
                 <div class="form-group-input">
                     <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required>
@@ -52,7 +52,7 @@
             </div>
 
             <div class="form-group">
-                <label for="tel" class="form-label">{{ __('Telephone') }}</label>
+                <label for="tel" class="form-label"><b>{{ __('Telephone') }}</b></label>
 
                 <div class="form-group-input">
                     <input id="tel" type="tel" class="form-control{{ $errors->has('tel') ? ' is-invalid' : '' }}" name="tel" value="{{ old('tel') }}" required>
@@ -68,7 +68,7 @@
 
             {{-- Mot de passe de l'utilisateur --}}
             <div class="form-group">
-                <label for="password" class="form-label">{{ __('Mot de passe') }}</label>
+                <label for="password" class="form-label"><b>{{ __('Mot de passe') }}</b></label>
 
                 <div class="form-group-input">
                     <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" required>
@@ -85,7 +85,7 @@
             {{-- Confirm mot de passe de l'utilisateur --}}
             <div class="form-group">
                 <label for="password-confirm"
-                    class="form-label">{{ __('Confirmer le mot de passe') }}</label>
+                    class="form-label"><b>{{ __('Confirmer le mot de passe') }}</b></label>
 
                 <div class="form-group-input">
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -95,7 +95,7 @@
 
             {{-- adresse de l'utilisateur --}}
             <div class="form-group">
-                <label for="adresse1" class="form-label">{{ __('Adresse') }}</label>
+                <label for="adresse1" class="form-label"><b>{{ __('Adresse') }}</b></label>
 
                 <div class="form-group-input">
                     <input id="adresse1" type="text" class="form-control{{ $errors->has('adresse1') ? ' is-invalid' : '' }}" name="adresse1" value="{{ old('adresse1') }}" required>
@@ -111,7 +111,7 @@
 
             {{-- complement adresse de l'utilisateur --}}
             <div class="form-group">
-                <label for="adresse2" class="form-label">{{ __('Complément d\'Adresse') }}</label>
+                <label for="adresse2" class="form-label"><b>{{ __('Complément d\'Adresse') }}</b></label>
 
                 <div class="form-group-input">
                     <input id="adresse2" type="text" class="form-control{{ $errors->has('adresse2') ? ' is-invalid' : '' }}" name="adresse2" value="{{ old('adresse2') }}">
@@ -127,7 +127,7 @@
 
             {{-- ville de l'utilisateur --}}
             <div class="form-group">
-                <label for="ville" class="form-label">{{ __('Ville') }}</label>
+                <label for="ville" class="form-label"><b>{{ __('Ville') }}</b></label>
 
                 <div class="form-group-input">
                     <input id="ville" type="text" class="form-control{{ $errors->has('ville') ? ' is-invalid' : '' }}" name="ville" value="{{ old('ville') }}" required>
@@ -143,7 +143,7 @@
 
             {{-- code_postal de l'utilisateur --}}
             <div class="form-group">
-                <label for="code_postal" class="form-label">{{ __('Code Postal') }}</label>
+                <label for="code_postal" class="form-label"><b>{{ __('Code Postal') }}</b></label>
 
                 <div class="form-group-input">
                     <input id="code_postal" type="text" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="code_postal" value="{{ old('code_postal') }}" required>
@@ -161,8 +161,8 @@
             <div class="form-group">
 
                 <div class="form-group-input">
-                    <input id="role_tondu" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="tondu"> <label for="role_tondu" class="form-label">{{ __('Tondu') }}</label>
-                    <input id="role_tondeur" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="tondeur"> <label for="role_tondeur" class="form-label">{{ __('Tondeur') }}</label>
+                    <input id="role_tondu" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="tondu"> <label for="role_tondu" class="form-label"><b>{{ __('Tondu') }}</b></label>
+                    <input id="role_tondeur" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="tondeur"> <label for="role_tondeur" class="form-label"><b>{{ __('Tondeur') }}</b></label>
 
                 </div>
             </div>

@@ -20,7 +20,12 @@
                 flex:0.2;
                 color: grey;
                 padding-top:0.4rem;
-                border-bottom: 1px solid grey;
+                b {
+                    font-weight: normal;
+                    padding-bottom:5px;
+                    padding-left: 15px;
+                    border-bottom: 1px solid grey;
+                }
             }
             div{
                 flex:0.4;
