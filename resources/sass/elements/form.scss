@@ -13,15 +13,17 @@
             display: flex;
             flex-direction: row;
             margin-bottom:0.6rem;
+            justify-content: center;
             label {
                 text-align: right;
                 margin-right:16px;
-                flex:0.4;
+                flex:0.2;
                 color: grey;
                 padding-top:0.4rem;
+                border-bottom: 1px solid grey;
             }
             div{
-                flex:0.6;
+                flex:0.4;
             }
             input {
                 width:100%;

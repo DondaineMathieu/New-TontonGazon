@@ -127,15 +127,17 @@ footer {
     .form-container form .form-group {
       display: flex;
       flex-direction: row;
-      margin-bottom: 0.6rem; }
+      margin-bottom: 0.6rem;
+      justify-content: center; }
       .form-container form .form-group label {
         text-align: right;
         margin-right: 16px;
-        flex: 0.4;
+        flex: 0.2;
         color: grey;
-        padding-top: 0.4rem; }
+        padding-top: 0.4rem;
+        border-bottom: 1px solid grey; }
       .form-container form .form-group div {
-        flex: 0.6; }
+        flex: 0.4; }
       .form-container form .form-group input {
         width: 100%;
         padding: 0.4rem; }
