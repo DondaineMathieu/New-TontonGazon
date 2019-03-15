@@ -22,3 +22,4 @@ Route::get('/annonce/{id}', 'MonControlleur@annonce');
 Route::get('/creer-annonce', 'MonControlleur@creerAnnonce')->name('creerAnnonce');
 Route::post('/creer-annonce', 'CreerAnnonceController@create')->name('creerAnnonce');
 
+Route::get('/logout', 'MonControlleur@logout');

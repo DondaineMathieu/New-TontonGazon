@@ -8,7 +8,7 @@
         <li id="nav-inscription"><a href="{{ route('register') }}">Inscription</a></li>
     @else
         <li id="nav-profil">Bonjour <b><a href="/utilisateur/{{ Auth::user()->id }}"> {{ Auth::user()->prenom }} </a></b></li>
-        <li id="nav-deconnect"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"> Deconnexion </a></li>
+        <li id="nav-deconnect"><a href="{{ route('logout') }}" {{-- onclick="event.preventDefault(); document.getElementById('logout-form').submit();"--}}> Deconnexion </a></li>
     @endguest
     <ul>
 </nav>

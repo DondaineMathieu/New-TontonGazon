@@ -37,4 +37,8 @@ class MonControlleur extends Controller
         return view('creer_annonce');
     }
 
+    public function logout() {
+        Auth::logout();
+        return view("index");
+    }
 }
