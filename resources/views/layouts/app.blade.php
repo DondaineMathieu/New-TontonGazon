@@ -22,6 +22,7 @@
 </head>
 <body>
     @include('Elements/_header')
+    @include('Elements/_accueil')
     <div id="app">
         <main class="py-4">
             @yield('content')

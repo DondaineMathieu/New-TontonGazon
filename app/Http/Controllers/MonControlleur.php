@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 class MonControlleur extends Controller
 {
     public function index() {
+        $annonces = Demande::all();
         return view("index");
     }
 

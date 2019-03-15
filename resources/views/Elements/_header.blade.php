@@ -1,5 +1,6 @@
 <nav class="nav">
     <ul>
+        <li style="position:absolute; left:0;"><a href="/"> Aller a l'acceuil </a></li>
         <li id="nav-V-ann"><a href="/annonces">Voir les annonces</a></li>
         <li id="nav-P-ann"><a href="/creer-annonce">Publier une annonce</a></li>
     @guest
