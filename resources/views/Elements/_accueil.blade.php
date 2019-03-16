@@ -14,7 +14,14 @@
         @endif 
     @endforeach
     
-        
+    @foreach ($annoncetype as $at)
+        @if($at->id_tondu == Auth::user()->id)
+            <h1>Voici votre annonce type :</h1>
+        @else
+            <h1>Vous n'avez pas d'annonce type</h1>
+            <h2><a href="">Creer une annonce type</a></h2>
+        @endif
+    @endforeach
 @else
     <p>Bonjour <b>{{Auth::user()->prenom}} {{Auth::user()->nom}}</b> vous etes un <b>Tondeur</b> </p>
 @endguest

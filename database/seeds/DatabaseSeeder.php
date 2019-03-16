@@ -107,6 +107,16 @@ class DatabaseSeeder extends Seeder
             'prix' => '265',
         ]);
 
+            // Demande Type
+
+        DB::table('demandetype')->insert([
+            'id_tondu' => "3",
+            'titre' => 'Ceci est l\'annonce type de Valentin Wojtasinksi',
+            'texte' => 'voila normalement ça devrait fonctionner, PS : cecei est le texte de description',
+            'surface' => '896',
+            'prix' => '265',
+        ]);
+
             // Les reponses
 
         DB::table('reponse')->insert([

@@ -12,7 +12,8 @@ class MonControlleur extends Controller
 {
     public function index() {
         $annonces = Demande::all();
-        return view("index",['annonces' => $annonces]);
+        $annonceType = DemandeType::all();
+        return view("index",['annonces' => $annonces, 'annoncetype' => $annonceType]);
     }
 
     public function utilisateur($id) {
