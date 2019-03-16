@@ -5,13 +5,14 @@ namespace TontonGazon\Http\Controllers;
 use Illuminate\Http\Request;
 use TontonGazon\User;
 use TontonGazon\Demande;
+use TontonGazon\DemandeType;
 use Illuminate\Support\Facades\Auth;
 
 class MonControlleur extends Controller
 {
     public function index() {
         $annonces = Demande::all();
-        return view("index");
+        return view("index",['annonces' => $annonces]);
     }
 
     public function utilisateur($id) {

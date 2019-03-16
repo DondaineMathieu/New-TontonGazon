@@ -22,7 +22,11 @@
 </head>
 <body>
     @include('Elements/_header')
-    @include('Elements/_accueil')
+
+    @if(Request::url() === 'http://127.0.0.1:8000')
+        @include('Elements/_accueil')
+    @endif
+   
     <div id="app">
         <main class="py-4">
             @yield('content')
