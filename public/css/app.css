@@ -113,6 +113,51 @@ footer {
       #footer div ul li .titrefooter {
         font-size: 1.4rem; } }
 
+.accueil-tondu-container {
+  widows: 100%;
+  height: auto;
+  padding: 2rem;
+  background-image: url("../img/jardin.JPG");
+  background-repeat: no-repeat;
+  background-position: center; }
+  .accueil-tondu-container .accueil-tondu-bonjour {
+    color: white;
+    font-size: 4rem; }
+  .accueil-tondu-container .accueil-tondu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    color: white; }
+    .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left {
+      grid-column: 1; }
+      .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-vos-annonces {
+        font-weight: bold;
+        font-size: 3rem; }
+      .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces {
+        border-left: solid white 4px;
+        padding-left: 0.75rem; }
+        .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces .accueil-tondu-annonce-solo {
+          border-left: solid white 2px;
+          padding-left: 1.5rem;
+          margin: 1rem 0; }
+          .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces .accueil-tondu-annonce-solo .accueil-tondu-titre-annonce {
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1.6rem; }
+          .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces .accueil-tondu-annonce-solo .accueil-tondu-texte-annonce {
+            font-size: 0.8rem; }
+          .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces .accueil-tondu-annonce-solo .accueil-tondu-lien-annonce {
+            display: flex;
+            flex-direction: row-reverse;
+            padding-right: 4rem; }
+            .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces .accueil-tondu-annonce-solo .accueil-tondu-lien-annonce a {
+              color: white;
+              font-size: 0.8rem;
+              text-decoration: none;
+              font-style: italic; }
+    .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-right {
+      grid-column: 2; }
+
 .form-container {
   width: 70%;
   padding: 2rem;
