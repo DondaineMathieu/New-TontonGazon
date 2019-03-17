@@ -23,11 +23,8 @@ class CreerAnnonceController extends Controller
         ]);
         return view('home');
     }
-}
 
-class CreerAnnonceTypyeController extends Controller
-{
-    protected function create(Request $request)
+    protected function createtype(Request $request)
     {
         DemandeType::create([
             'titre' => $request->input('titre'),

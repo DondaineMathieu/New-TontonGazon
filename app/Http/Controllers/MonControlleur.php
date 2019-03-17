@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use TontonGazon\User;
 use TontonGazon\Demande;
 use TontonGazon\DemandeType;
+use TontonGazon\Reponse;
 use Illuminate\Support\Facades\Auth;
 
 class MonControlleur extends Controller
@@ -13,7 +14,8 @@ class MonControlleur extends Controller
     public function index() {
         $annonces = Demande::all();
         $annonceType = DemandeType::all();
-        return view("index",['annonces' => $annonces, 'annoncetype' => $annonceType]);
+        $reponse = Reponse::all();
+        return view("index",['annonces' => $annonces, 'annoncetype' => $annonceType, 'reponse' => $reponse]);
     }
 
     public function utilisateur($id) {
@@ -37,6 +39,10 @@ class MonControlleur extends Controller
 
     public function creerAnnonce() {
         return view('creer_annonce');
+    }
+
+    public function creerAnnoncetype() {
+        return view('creer_annoncetype');
     }
 
     public function logout() {
