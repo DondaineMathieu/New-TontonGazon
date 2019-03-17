@@ -126,7 +126,7 @@ footer {
   .accueil-tondu-container .accueil-tondu-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2rem;
+    grid-column-gap: 4rem;
     color: white; }
     .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left {
       grid-column: 1; }
@@ -157,6 +157,12 @@ footer {
               font-style: italic; }
     .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-right {
       grid-column: 2; }
+      .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-right .accueil-tondu-container-annoncestype {
+        margin-top: 20vh;
+        transform: translateY(-50%); }
+        .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-right .accueil-tondu-container-annoncestype .accueil-tondu-annoncetype {
+          font-size: 2.6rem;
+          font-weight: bold; }
 
 .form-container {
   width: 70%;

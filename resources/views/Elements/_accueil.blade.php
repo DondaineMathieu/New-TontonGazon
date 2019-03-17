@@ -21,19 +21,19 @@
             </div>
         </div>
 
-        <div class="tondu-right">
-            <div class="container-annoncestype">
-                <div>Annonce Type :</div>
+        <div class="accueil-tondu-right">
+            <div class="accueil-tondu-container-annoncestype">
+                <div class="accueil-tondu-annoncetype">Annonce Type :</div>
                 @if($annonceType == false)
                     <div> t'as pas d'annonce type </div>
                     <a href="/creer-annoncetype">Creer une annonce type</a>
                 @else
                     <div> T'as une annonce type </div>
-                    <div class="detail-annoncetype">
-                        <div class="annoncetype-titre">{{$annonceType->titre}}</div>
-                        <div class="annoncetype-texte">{{$annonceType->texte}}</div>
-                        <div class="annoncetype-prix">{{$annonceType->prix}}</div>
-                        <div class="annoncetype-surface">{{$annonceType->surface}}</div>
+                    <div class="accueil-tondu-detail-annoncetype">
+                        <div class="accueil-tondu-annoncetype-titre">{{$annonceType->titre}}</div>
+                        <div class="accueil-tondu-annoncetype-texte">{{$annonceType->texte}}</div>
+                        <div class="accueil-tondu-annoncetype-prix">{{$annonceType->prix}}</div>
+                        <div class="accueil-tondu-annoncetype-surface">{{$annonceType->surface}}</div>
                     </div>
                 @endif
             </div>
