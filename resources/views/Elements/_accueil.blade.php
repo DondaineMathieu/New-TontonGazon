@@ -5,9 +5,10 @@
 <div class="accueil-tondu-container">
     <div class="accueil-tondu-bonjour">Bonjour <b>{{Auth::user()->prenom}},</b> {{-- vous etes un <b>Tondu</b> --}} </div>
 
+    <div class="accueil-tondu-vos-annonces">Vos annonces :</div>
+
     <div class="accueil-tondu-grid">
         <div class="accueil-tondu-left">
-            <div class="accueil-tondu-vos-annonces">Vos annonces :</div>
             <div class="accueil-tondu-container-annonces">
                 @foreach ($annonces as $a)
                     @if($a->id_tondu == Auth::user()->id)
@@ -28,18 +29,17 @@
                     <div> t'as pas d'annonce type </div>
                     <a href="/creer-annoncetype">Creer une annonce type</a>
                 @else
-                    <div> T'as une annonce type </div>
                     <div class="accueil-tondu-detail-annoncetype">
-                        <div class="accueil-tondu-annoncetype-titre">{{$annonceType->titre}}</div>
-                        <div class="accueil-tondu-annoncetype-texte">{{$annonceType->texte}}</div>
-                        <div class="accueil-tondu-annoncetype-prix">{{$annonceType->prix}}</div>
-                        <div class="accueil-tondu-annoncetype-surface">{{$annonceType->surface}}</div>
+                        <div class="accueil-tondu-annoncetype-titre"><b>Titre : </b>{{$annonceType->titre}}</div>
+                        <div class="accueil-tondu-annoncetype-texte"><b>Texte : </b>{{$annonceType->texte}}</div>
+                        <div class="accueil-tondu-annoncetype-prix"><b>Prix :</b> {{$annonceType->prix}}€ soit: {{round($annonceType->prix/$annonceType->surface,2)}}€/m²</div>
+                        <div class="accueil-tondu-annoncetype-surface"><b>Surface :</b> {{$annonceType->surface}} m²</div>
                     </div>
                 @endif
             </div>
-            <div class="scroll">
-                <div><a href="#">Voir les reponses</a></div>
-                <div><a href="#">Acceder a mes statistiques</a></div>
+            <div class="accueil-tondu-scroll">
+                <div><a href="#">Voir les reponses <span>v</span></a></div>
+                <div><a href="#">Acceder a mes statistiques <span>v</span></a></div>
             </div>
         </div>
     </div>

@@ -9,6 +9,11 @@
         color:white;
         font-size:4rem;
     }
+    .accueil-tondu-vos-annonces {
+        color: white;
+        font-weight: bold;
+        font-size:3rem;
+    }
     .accueil-tondu-grid {
         display: grid;
         grid-template-columns:1fr 1fr;
@@ -16,10 +21,6 @@
         color:white;
         .accueil-tondu-left {
             grid-column: 1;
-            .accueil-tondu-vos-annonces {
-                font-weight: bold;
-                font-size:3rem;
-            }
             .accueil-tondu-container-annonces {
                 border-left: solid white 4px;
                 padding-left: 0.75rem;
@@ -51,12 +52,31 @@
         }
         .accueil-tondu-right {
             grid-column: 2;
+            position: relative;
             .accueil-tondu-container-annoncestype {
-                margin-top: 20vh;
-                transform: translateY(-50%);
+                padding-left: 2rem;
                 .accueil-tondu-annoncetype {
                     font-size:2.6rem;
                     font-weight: bold;
+                }
+            }
+            .accueil-tondu-scroll {
+                position: absolute;
+                bottom: 0%;
+                a {
+                    color:white;
+                    text-decoration: none;
+                    font-style: italic;
+                    span {
+                        display: inline-block;
+                        text-align: center;
+                        font-style: normal;
+                        font-weight: normal;
+                        border: solid 2px white;
+                        width: 1.4rem;
+                        height: 1.4rem;
+                        border-radius: 50%;
+                    }
                 }
             }
         }
