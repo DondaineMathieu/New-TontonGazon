@@ -106,15 +106,12 @@ class DatabaseSeeder extends Seeder
             'surface' => '896',
             'prix' => '265',
         ]);
-
-            // Demande Type
-
-        DB::table('demandetype')->insert([
+        DB::table('demande')->insert([
             'id_tondu' => "3",
-            'titre' => 'Ceci est l\'annonce type de Valentin Wojtasinksi',
-            'texte' => 'voila normalement ça devrait fonctionner, PS : cecei est le texte de description',
-            'surface' => '896',
-            'prix' => '265',
+            'titre' => 'Une annonce type pour l\'utilisateur3',
+            'texte' => 'la description de lannonce type de lutilisateur 3',
+            'surface' => '1212',
+            'prix' => '424',
         ]);
 
             // Les reponses
