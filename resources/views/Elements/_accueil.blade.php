@@ -38,7 +38,7 @@
                 @endif
             </div>
             <div class="accueil-tondu-scroll">
-                <div><a href="#">Voir les reponses <span>v</span></a></div>
+                <div><a href="#">Voir les reponses <span>v</span></a></div><br />
                 <div><a href="#">Acceder a mes statistiques <span>v</span></a></div>
             </div>
         </div>
