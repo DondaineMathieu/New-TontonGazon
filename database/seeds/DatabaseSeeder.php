@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             'nom' => "Dondaine",
             'prenom' => "Mathieu",
-            'email' => 'azerty@gmail.com',
+            'email' => 'tondeur1@gmail.com',
             'password' => bcrypt('azerty'),
             'tel' => '1234567890',
             'ville' => 'Ma Ville',
@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             'nom' => "Pierru",
             'prenom' => "Dimitry",
-            'email' => 'qsdfd@gmail.com',
+            'email' => 'tondeur2@gmail.com',
             'password' => bcrypt('azerty'),
             'tel' => '4567891230',
             'ville' => 'Sa Ville',
@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             'nom' => "Wojtasinsky",
             'prenom' => "Valentin",
-            'email' => 'wxcvbn@gmail.com',
+            'email' => 'tondu1@gmail.com',
             'password' => bcrypt('azerty'),
             'tel' => '7894561230',
             'ville' => 'Sa Ville',
@@ -57,7 +57,7 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             'nom' => "Tjampens",
             'prenom' => "Teo",
-            'email' => 'mljkhg@gmail.com',
+            'email' => 'tondu2@gmail.com',
             'password' => bcrypt('azerty'),
             'tel' => '7418529630',
             'ville' => 'Sa Ville',
