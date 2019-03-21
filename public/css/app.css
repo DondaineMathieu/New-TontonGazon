@@ -123,64 +123,62 @@ footer {
   .accueil-tondu-container .accueil-tondu-bonjour {
     color: white;
     font-size: 4rem; }
-  .accueil-tondu-container .accueil-tondu-vos-annonces {
+  .accueil-tondu-container .accueil-titre {
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 3rem; }
-  .accueil-tondu-container .accueil-tondu-grid {
+  .accueil-tondu-container .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 4rem;
     color: white;
     min-height: 40vh; }
-    .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left {
+    .accueil-tondu-container .grid .left {
       grid-column: 1; }
-      .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces {
+      .accueil-tondu-container .grid .left .container-annonces {
         border-left: solid white 4px;
         padding-left: 0.75rem; }
-        .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces .accueil-tondu-annonce-solo {
+        .accueil-tondu-container .grid .left .container-annonces .annonce-solo {
           border-left: solid white 2px;
           padding-left: 1.5rem;
           margin: 1rem 0; }
-          .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces .accueil-tondu-annonce-solo .accueil-tondu-titre-annonce {
+          .accueil-tondu-container .grid .left .container-annonces .annonce-solo .titre-annonce {
             font-weight: bold;
             font-size: 1.2rem;
             line-height: 1.6rem; }
-          .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces .accueil-tondu-annonce-solo .accueil-tondu-texte-annonce {
+          .accueil-tondu-container .grid .left .container-annonces .annonce-solo .texte-annonce {
             font-size: 0.8rem; }
-          .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces .accueil-tondu-annonce-solo .accueil-tondu-lien-annonce {
+          .accueil-tondu-container .grid .left .container-annonces .annonce-solo .lien-annonce {
             display: flex;
             flex-direction: row-reverse;
             padding-right: 4rem; }
-            .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-left .accueil-tondu-container-annonces .accueil-tondu-annonce-solo .accueil-tondu-lien-annonce a {
+            .accueil-tondu-container .grid .left .container-annonces .annonce-solo .lien-annonce a {
               color: white;
               font-size: 0.8rem;
               text-decoration: none;
               font-style: italic; }
-    .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-right {
+    .accueil-tondu-container .grid .right {
       grid-column: 2;
       position: relative; }
-      .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-right .accueil-tondu-container-annoncestype {
+      .accueil-tondu-container .grid .right .container-annoncestype {
         padding-left: 2rem; }
-        .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-right .accueil-tondu-container-annoncestype .accueil-tondu-annoncetype {
+        .accueil-tondu-container .grid .right .container-annoncestype .annoncetype {
           font-size: 2.6rem;
           font-weight: bold; }
-      .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-right .accueil-tondu-scroll {
-        position: absolute;
-        bottom: 0%; }
-        .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-right .accueil-tondu-scroll a {
+  .accueil-tondu-container .container-reponses {
+    margin-top: 2rem; }
+    .accueil-tondu-container .container-reponses .list-reponses {
+      border-left: solid white 4px;
+      padding-left: 0.75rem; }
+      .accueil-tondu-container .container-reponses .list-reponses .detail-reponse {
+        border-left: solid white 2px;
+        padding-left: 1.5rem;
+        margin: 1rem 0;
+        color: white; }
+        .accueil-tondu-container .container-reponses .list-reponses .detail-reponse a {
           color: white;
-          text-decoration: none;
-          font-style: italic; }
-          .accueil-tondu-container .accueil-tondu-grid .accueil-tondu-right .accueil-tondu-scroll a span {
-            display: inline-block;
-            text-align: center;
-            font-style: normal;
-            font-weight: normal;
-            border: solid 2px white;
-            width: 1.4rem;
-            height: 1.4rem;
-            border-radius: 50%; }
+          font-weight: bold;
+          text-decoration: none; }
 
 .form-container {
   width: 70%;

@@ -12,9 +12,10 @@ class MonControlleur extends Controller
 {
     public function index() {
         $annonces = Demande::all();
+        $utilisateur = User::all();
         $reponses = Reponse::all();
         $annonceType = Demande::whereRaw('date_tonte is NULL AND id_tondu=?', [Auth::id()])->get()->first();
-        return view("index",['annonces' => $annonces, 'reponses' => $reponses, 'annonceType' => $annonceType]);
+        return view("index",['annonces' => $annonces, 'reponses' => $reponses, 'annonceType' => $annonceType, "utilisateur" => $utilisateur]);
     }
 
     public function utilisateur($id) {

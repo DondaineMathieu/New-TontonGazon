@@ -1,71 +1,83 @@
 <div>
-@guest
+    @guest
     pas log
-@elseif(Auth::user()->role == "tondu")
-<div class="accueil-tondu-container">
-    <div class="accueil-tondu-bonjour">Bonjour <b>{{Auth::user()->prenom}},</b> {{-- vous etes un <b>Tondu</b> --}} </div>
-
-    <div class="accueil-tondu-vos-annonces">Vos annonces :</div>
-
-    <div class="accueil-tondu-grid">
-        <div class="accueil-tondu-left">
-            <div class="accueil-tondu-container-annonces">
-                @foreach ($annonces as $a)
-                    @if($a->id_tondu == Auth::user()->id)
-                    <div class="accueil-tondu-annonce-solo">
-                        <div class="accueil-tondu-titre-annonce">{{$a->titre}}</div>
-                        <div class="accueil-tondu-texte-annonce">{{$a->texte}}</div>
-                        <div class="accueil-tondu-lien-annonce"><a href="/annonce/{{$a->id}}">Voir l'annonce ></a></div>
-                    </div>
-                    @endif 
-                @endforeach
-            </div>
+    @elseif(Auth::user()->role == "tondu")
+    <div class="accueil-tondu-container">
+        <div class="accueil-tondu-bonjour">Bonjour <b>{{Auth::user()->prenom}},</b> {{-- vous etes un <b>Tondu</b> --}}
         </div>
 
-        <div class="accueil-tondu-right">
-            <div class="accueil-tondu-container-annoncestype">
-                <div class="accueil-tondu-annoncetype">Annonce Type :</div>
-                @if($annonceType == false)
+        <div class="accueil-titre">Vos annonces :</div>
+
+        <div class="grid">
+            <div class="left">
+                <div class="container-annonces">
+                    @foreach ($annonces as $a)
+                    @if($a->id_tondu == Auth::user()->id)
+                    <div class="annonce-solo">
+                        <div class="titre-annonce">{{$a->titre}}</div>
+                        <div class="texte-annonce">{{$a->texte}}</div>
+                        <div class="lien-annonce"><a href="/annonce/{{$a->id}}">Voir l'annonce ></a></div>
+                    </div>
+                    @endif
+                    @endforeach
+                </div>
+            </div>
+
+            <div class="right">
+                <div class="container-annoncestype">
+                    <div class="annoncetype">Annonce Type :</div>
+                    @if($annonceType == false)
                     <div> t'as pas d'annonce type </div>
                     <a href="/creer-annoncetype">Creer une annonce type</a>
-                @else
-                    <div class="accueil-tondu-detail-annoncetype">
-                        <div class="accueil-tondu-annoncetype-titre"><b>Titre : </b>{{$annonceType->titre}}</div>
-                        <div class="accueil-tondu-annoncetype-texte"><b>Texte : </b>{{$annonceType->texte}}</div>
-                        <div class="accueil-tondu-annoncetype-prix"><b>Prix :</b> {{$annonceType->prix}}€ soit: {{round($annonceType->prix/$annonceType->surface,2)}}€/m²</div>
-                        <div class="accueil-tondu-annoncetype-surface"><b>Surface :</b> {{$annonceType->surface}} m²</div>
+                    @else
+                    <div class="detail-annoncetype">
+                        <div class="annoncetype-titre"><b>Titre : </b>{{$annonceType->titre}}</div>
+                        <div class="annoncetype-texte"><b>Texte : </b>{{$annonceType->texte}}</div>
+                        <div class="annoncetype-prix"><b>Prix :</b> {{$annonceType->prix}}€ soit:
+                            {{round($annonceType->prix/$annonceType->surface,2)}}€/m²</div>
+                        <div class="annoncetype-surface"><b>Surface :</b> {{$annonceType->surface}} m²
+                        </div>
                     </div>
-                @endif
+                    @endif
+                </div>
             </div>
-            <div class="accueil-tondu-scroll">
-                <div><a href="#">Voir les reponses <span>v</span></a></div><br />
-                <div><a href="#">Acceder a mes statistiques <span>v</span></a></div>
+        </div>
+
+        <div class="container-reponses">
+            <div class="accueil-titre">Reponses a vos demandes : </div>
+            {{$rep=false}}
+            <div class="list-reponses">
+                @foreach($annonces as $a)
+                @foreach($reponses as $r)
+                @foreach ($utilisateur as $u)
+                @if($a->id_tondu == Auth::user()->id && $r->id_annonce == $a->id && $u->id == $r->id_tondeur)
+                <div style="display:none;">{{$rep=true}}</div>
+                <div class="detail-reponse">
+                    <div>
+                        <a href="utilisateur/{{$r->id_tondeur}}"> {{$u->prenom}} </a>
+                        souhaite repondre à votre annonce : <a href="annonce/{{$a->id}}">{{$a->titre}}</a>
+                    </div>
+                </div>
+            </div>
+            @endif
+            @endforeach
+            @endforeach
+            @endforeach
+        </div>
+        @if($rep==false)
+        <div>Vous n'avez pas de reponse pour le moment </div>
+        @endif
+        <div class="container-statistiques">
+            <div class="accueil-titre">Statistiques :</div>
+            <div style="display:none;">{{$totalAnnonce=0}} {{$totalReponse=0}}{{$annonceEnded=0}} {{$annonceSurface=0}} {{$annonceArgent=0}}</div>
+            <div>
+                    Vous avez creer @foreach($annonces as $a) @if($a->id_tondu == Auth::user()->id) <div style="display:none;">{{$totalAnnonce=$totalAnnonce+1}}</div> @endif @endforeach <b>{{$totalAnnonce}} annonce(s)</b>
+                    Vous cumulé @foreach($annonces as $a) @if($a->id_tondu == Auth::user()->id) <div style="display:none;">{{$totalReponse=$totalReponse+1}}</div> @endif @endforeach <b>{{$totalReponse}} reponse(s)</b>
             </div>
         </div>
     </div>
-
-    <div class="container-reponses">
-        <div>Reponses a vos demandes</div>
-        {{$rep=false}}
-        @foreach($annonces as $a)
-            @foreach($reponses as $r)
-            <div class="list-reponse">
-                @if($a->id_tondu == Auth::user()->id && $r->id_annonce == $a->id)
-                    <div style="display:none;">{{$rep=true}}</div>
-                    <div class="detail-reponse">
-                    <div>{{$r->id_tondeur}} souhaite repondre à votre annonce {{$a->id_annonce}}</div>
-                        <div></div>
-                    </div>            
-                @endif
-            </div>
-            @endforeach
-        @endforeach
-        @if($rep==false)
-            <div>Vous n'avez pas de reponse </div>
-        @endif
-    </div>
-</div>    
+</div>
 @else
-    <p>Bonjour <b>{{Auth::user()->prenom}} {{Auth::user()->nom}}</b> vous etes un <b>Tondeur</b> </p>
+<p>Bonjour <b>{{Auth::user()->prenom}} {{Auth::user()->nom}}</b> vous etes un <b>Tondeur</b> </p>
 @endguest
 </div>
