@@ -19,7 +19,7 @@
         grid-template-columns:1fr 1fr;
         grid-column-gap: 4rem;
         color:white;
-        min-height: 40vh;
+        min-height: 35vh;
         .left {
             grid-column: 1;
             .container-annonces {
@@ -78,8 +78,15 @@
                     font-weight: bold;
                     text-decoration: none;
                 }
+                .reponse-choix {
+                    text-align: right;
+                    margin-top: 0.4rem;
+                    width: 50%;
+                    a {
+                        margin-left: 4rem;
+                    }
+                }
             }
         }
     }
-
 }

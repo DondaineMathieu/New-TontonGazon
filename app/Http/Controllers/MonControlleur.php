@@ -7,6 +7,7 @@ use TontonGazon\User;
 use TontonGazon\Demande;
 use TontonGazon\Reponse;
 use Illuminate\Support\Facades\Auth;
+use Carbon\Carbon;
 
 class MonControlleur extends Controller
 {
@@ -14,8 +15,9 @@ class MonControlleur extends Controller
         $annonces = Demande::all();
         $utilisateur = User::all();
         $reponses = Reponse::all();
+        $todayDate = Carbon::now();
         $annonceType = Demande::whereRaw('date_tonte is NULL AND id_tondu=?', [Auth::id()])->get()->first();
-        return view("index",['annonces' => $annonces, 'reponses' => $reponses, 'annonceType' => $annonceType, "utilisateur" => $utilisateur]);
+        return view("index",['annonces' => $annonces, 'reponses' => $reponses, 'annonceType' => $annonceType, "utilisateur" => $utilisateur, "todayDate" => $todayDate]);
     }
 
     public function utilisateur($id) {

@@ -132,7 +132,7 @@ footer {
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 4rem;
     color: white;
-    min-height: 40vh; }
+    min-height: 35vh; }
     .accueil-tondu-container .grid .left {
       grid-column: 1; }
       .accueil-tondu-container .grid .left .container-annonces {
@@ -179,6 +179,12 @@ footer {
           color: white;
           font-weight: bold;
           text-decoration: none; }
+        .accueil-tondu-container .container-reponses .list-reponses .detail-reponse .reponse-choix {
+          text-align: right;
+          margin-top: 0.4rem;
+          width: 50%; }
+          .accueil-tondu-container .container-reponses .list-reponses .detail-reponse .reponse-choix a {
+            margin-left: 4rem; }
 
 .form-container {
   width: 70%;
