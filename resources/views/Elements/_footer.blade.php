@@ -1,5 +1,4 @@
 <div id="container-footer">
-    <img src="../../img/illustration-png-5.png" alt="Illustration footer" />
     <footer id="footer">
         <div id="footer-col-1">
             <ul>
@@ -46,6 +45,5 @@
                 </ul>
                 <input type="mail" placeholder="AdresseMail@jsp.com" id="footer-mail" /><!-- --><input type="submit" value="C'est partie !" id="footer-submit"/>
             </div>
-            
     </footer>
 </div>

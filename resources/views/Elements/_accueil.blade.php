@@ -1,6 +1,8 @@
 <div>
     @guest
-    pas log
+    <div class="accueil-guest-container">
+        <div class="bienvenu"></div>
+    </div>
     @elseif(Auth::user()->role == "tondu")
     <div class="accueil-tondu-container">
         <div class="accueil-tondu-bonjour">Bonjour <b>{{Auth::user()->prenom}},</b> {{-- vous etes un <b>Tondu</b> --}}
@@ -87,9 +89,18 @@
         <div class="accueil-titre">Vos annonces passées :</div>
         <div class="grid">
             <div class="left">
-                {{$annoncesPassee=false}}
                 <div class="container-annonces">
                     @foreach ($annonces as $a)
+                        @if ($date > $a->date_tonte && $a->id_tondu == Auth::user()->id )
+                            <div class="annonce-solo">
+                                <div class="titre-annonce">{{$a->titre}}</div>
+                                <div class="texte-annonce">{{$a->texte}}</div>
+                                <div class="lien-annonce"><a href="/annonce/{{$a->id}}">Voir l'annonce ></a></div>
+                            </div>
+                        @else
+                        @endif
+                    @endforeach
+                    {{-- @foreach ($annonces as $a)
                     @if($a->id_tondu == Auth::user()->id && $a->date_tonte <= $todayDate )
                     <div style="display:none">{{$annoncesPassee=true}}</div>
                     <div class="annonce-solo">
@@ -98,16 +109,21 @@
                         <div class="lien-annonce"><a href="/annonce/{{$a->id}}">Voir l'annonce ></a></div>
                     </div>
                     @endif
-                    @endforeach
                     @if($annoncesPassee==false)
                         <div></div>
-                    @endif
+                    @endif --}}
                 </div>
             </div>
 
             <div class="right"> </div>
         </div>
 
+
+        <div id="footer-img">
+            @include('Elements/_footer-img')
+        </div>
+
+        
     </div>
 </div>
 @else

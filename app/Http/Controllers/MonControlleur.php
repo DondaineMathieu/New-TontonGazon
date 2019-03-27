@@ -15,9 +15,9 @@ class MonControlleur extends Controller
         $annonces = Demande::all();
         $utilisateur = User::all();
         $reponses = Reponse::all();
-        $todayDate = Carbon::now();
+        $date = Carbon::now();
         $annonceType = Demande::whereRaw('date_tonte is NULL AND id_tondu=?', [Auth::id()])->get()->first();
-        return view("index",['annonces' => $annonces, 'reponses' => $reponses, 'annonceType' => $annonceType, "utilisateur" => $utilisateur, "todayDate" => $todayDate]);
+        return view("index",['annonces' => $annonces, 'reponses' => $reponses, 'annonceType' => $annonceType, "utilisateur" => $utilisateur, "date" => $date]);
     }
 
     public function utilisateur($id) {

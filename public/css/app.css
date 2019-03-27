@@ -32,6 +32,19 @@ nav.nav {
         margin-right: auto;
         padding: 7px; } }
 
+#footer-img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+  #footer-img svg {
+    fill: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto; }
+
 footer {
   color: white;
   background-color: #468a3f;
@@ -114,9 +127,8 @@ footer {
         font-size: 1.4rem; } }
 
 .accueil-tondu-container {
-  widows: 100%;
-  height: auto;
-  padding: 2rem;
+  padding: 2rem 2rem 20% 2rem;
+  position: relative;
   background-image: url("../img/jardin.JPG");
   background-repeat: no-repeat;
   background-position: center; }
@@ -253,3 +265,7 @@ footer {
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif; }
+
+.main-content {
+  position: relative;
+  padding-bottom: 20%; }

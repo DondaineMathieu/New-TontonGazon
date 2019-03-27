@@ -1,135 +1,17 @@
-// #footer {
-//     background-color: green;
-//     display: grid;
-//     grid-template-columns : 1fr 1fr 1fr 1fr;
-//     grid-gap : 40px;
-//     grid-template-areas: 
-//     "tb1 tb2 tb3 tb4"
-//     "tb1 tb2 tb3 tb5";
-// }
-
-// #footer {
-//     font-family: "BrokenChalk","Arial", sans-serif;
-//     div {
-//         ul {
-//             li {
-//                 line-height: 1.4;
-//             }
-//         }
-//     }
-// }
-
-// #footer-col-1 {
-//     text-align: center;
-//     text-decoration: none;
-//     grid-area: tb1;
-//     padding-left: 50px;
-//     padding-top: 25px;
-// }
-
-//     #footer-col-1 ul li{
-//         list-style-type: none; 
-//     }
-
-//         #footer-col-1 ul li a{
-//             text-decoration: none; 
-//             color:white;
-//             font-size: 0.8rem;
-//         }
-
-// #footer-col-2 {
-//     text-align: center;
-//     text-decoration: none;
-//     grid-area: tb2;
-//     padding-top: 25px;
-// }
-
-//      #footer-col-2 ul li{
-//         list-style-type: none;
-//     }
-
-//         #footer-col-2 ul li a{
-//             text-decoration: none; 
-//             color:white;
-//             font-size: 0.8rem;
-//         }
-
-// #footer-col-3 {
-//     text-align: center;
-//     text-decoration: none;
-//     grid-area: tb3;
-//     padding-top: 25px;
-//     padding-bottom:20px;
-//     }
-
-//         #footer-col-3 ul li{
-//              list-style-type: none;
-//         }
-
-//             #footer-col-3 ul li a{
-//                  text-decoration: none; 
-//                  color:white;
-//                  font-size: 0.8rem;
-//              }
-
-// #footer-col-4 {
-//     text-align: center;
-//     text-decoration: none;
-//     grid-area: tb4;  
-//     padding-top: 25px;  
-// }   
-
-//     #footer-col-4 ul li{
-//         list-style-type: none; 
-//     }
-
-//         #footer-col-4 ul li a{
-//            text-decoration: none; 
-//            color:white;
-//            font-size: 0.8rem;
-//           }
-
-// #footer-col-5 {
-//     text-align: center;
-//     text-decoration: none;
-//     grid-area: tb5;   
-//     margin-top:-85px;
-// }
-
-// #footer-col-5 ul li{
-//     list-style-type: none; 
-// }
-
-//     #footer-col-5 ul li a{
-//        text-decoration: none; 
-//        color:white;
-//        font-size: 0.8rem;
-//     }
-
-// .titrefooter {
-// font-size:1.2rem;
-// line-height: 2;
-// color: white;
-// }
-
-// #footer-mail {
-//     padding:5px;
-//     border-radius: 5px;
-//     border:none;
-// }
-
-// #footer-submit {
-//     background-color:darkgreen;
-//     border:none;
-//     padding:6px;
-//     margin-left:-5px;
-//     border-radius: 5px;
-// }
-
-// #footer-envoie:hover {
-//     background-color:darkolivegreen;
-//     cursor: pointer;
-// }
+#footer-img {
+    width:100%;
+    height: auto;
+    position: absolute;
+    bottom:0;
+    left:0;
+    svg {
+        fill:white;
+        position: absolute;
+        bottom:0;
+        width: 100%;
+        height: auto;
+    }
+}
 
 footer {
     color:white;

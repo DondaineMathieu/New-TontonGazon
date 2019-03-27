@@ -1,7 +1,6 @@
 .accueil-tondu-container {
-    widows: 100%;
-    height: auto;
-    padding:2rem;
+    padding:2rem 2rem 20% 2rem;    // Haut Droite Bas Gauche
+    position: relative;
     background-image:url('../img/jardin.JPG');
     background-repeat: no-repeat;
     background-position: center;

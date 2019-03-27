@@ -2,6 +2,8 @@
 
 @section('content')
 
+<div class="main-content">
+
 <h1> Creer une annonce </h1>
 @guest
     <div>Vous ne pouvez pas creer d'annonce sans être connecté</div>
@@ -94,4 +96,11 @@
     </form>
     @endif
 @endguest
+
+<div id="footer-img">
+        @include('Elements/_footer-img')
+    </div>
+    
+</div>
+
 @endsection
