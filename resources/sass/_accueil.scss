@@ -62,6 +62,9 @@
             }
         }
     }
+    .simple-text {
+        color:white;
+    }
     .container-reponses {
         margin-top:2rem;
         .list-reponses {
@@ -89,3 +92,42 @@
         }
     }
 }
+
+.accueil-tondeur-container {
+    padding:2rem 2rem 20% 2rem;    // Haut Droite Bas Gauche
+    position: relative;
+    background-image:url('../img/jardin.JPG');
+    background-repeat: no-repeat;
+    background-position: center;
+    .accueil-tondeur-bonjour {
+        color:white;
+        font-size:4rem;
+    }
+    .accueil-titre {
+        color: white;
+        font-weight: 600;
+        font-size:3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

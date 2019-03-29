@@ -1,12 +1,14 @@
 <div>
     @guest
     <div class="accueil-guest-container">
-        <div class="bienvenu"></div>
+        <div class="bienvenu">Guest</div>
     </div>
+
+
+
     @elseif(Auth::user()->role == "tondu")
     <div class="accueil-tondu-container">
-        <div class="accueil-tondu-bonjour">Bonjour <b>{{Auth::user()->prenom}},</b> {{-- vous etes un <b>Tondu</b> --}}
-        </div>
+        <div class="accueil-tondu-bonjour">Bonjour <b>{{Auth::user()->prenom}},</b> </div>
 
         <div class="accueil-titre">Vos annonces :</div>
         <div class="grid">
@@ -74,17 +76,9 @@
             @endforeach
         </div>
         @if($rep==false)
-        <div>Vous n'avez pas de reponse pour le moment </div>
+            <div class="simple-text">Vous n'avez pas de reponse pour le moment </div>
         @endif
 
-        <div class="container-statistiques">
-            <div class="accueil-titre">Statistiques :</div>
-            <div style="display:none;">{{$totalAnnonce=0}} {{$totalReponse=0}}{{$annonceEnded=0}} {{$annonceSurface=0}} {{$annonceArgent=0}}</div>
-            <div>
-                Vous avez creer @foreach($annonces as $a) @if($a->id_tondu == Auth::user()->id) <div style="display:none;">{{$totalAnnonce=$totalAnnonce+1}}</div> @endif @endforeach <b>{{$totalAnnonce}} annonce(s)</b>
-                Vous cumulé @foreach($annonces as $a) @if($a->id_tondu == Auth::user()->id) <div style="display:none;">{{$totalReponse=$totalReponse+1}}</div> @endif @endforeach <b>{{$totalReponse}} reponse(s)</b>
-            </div>
-        </div>
 
         <div class="accueil-titre">Vos annonces passées :</div>
         <div class="grid">
@@ -102,9 +96,18 @@
                     @endforeach
                 </div>
             </div>
-
-            <div class="right"> </div>
         </div>
+
+{{--         
+        <div class="container-statistiques">
+            <div class="accueil-titre">Statistiques :</div>
+            <div style="display:none;">{{$totalAnnonce=0}} {{$totalReponse=0}}{{$annonceEnded=0}} {{$annonceSurface=0}} {{$annonceArgent=0}}</div>
+            <div>
+                Vous avez creer @foreach($annonces as $a) @if($a->id_tondu == Auth::user()->id) <div style="display:none;">{{$totalAnnonce=$totalAnnonce+1}}</div> @endif @endforeach <b>{{$totalAnnonce}} annonce(s)</b>
+                Vous cumulé @foreach($annonces as $a) @if($a->id_tondu == Auth::user()->id) <div style="display:none;">{{$totalReponse=$totalReponse+1}}</div> @endif @endforeach <b>{{$totalReponse}} reponse(s)</b>
+            </div>
+        </div> 
+--}}
 
 
         <div id="footer-img">
@@ -114,7 +117,21 @@
         
     </div>
 </div>
+
+
 @else
-<p>Bonjour <b>{{Auth::user()->prenom}} {{Auth::user()->nom}}</b> vous etes un <b>Tondeur</b> </p>
+<div class="accueil-tondeur-container">
+    <div class="accueil-tondeur-bonjour">Bonjour <b>{{Auth::user()->prenom}},</b></div>
+
+    <div class="list-reponse">
+        @foreach($reponses as $r)
+        @foreach ($annonces as $a)
+            @if($r->id_tondeur == Auth::user()->id && $a->id == $r->id_annonce)
+            ADFRSGFSFDGQSFDQFSDQFSDQFDSQSDFQFSDQFSDQFDSFQDSQSDF
+            @endif
+        @endforeach
+        @endforeach
+    </div>
+</div>
 @endguest
 </div>
