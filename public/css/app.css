@@ -213,6 +213,24 @@ footer {
     color: white;
     font-weight: 600;
     font-size: 3rem; }
+  .accueil-tondeur-container .container-reponses .list-reponses {
+    border-left: solid white 4px;
+    padding-left: 0.75rem; }
+    .accueil-tondeur-container .container-reponses .list-reponses .details-reponse {
+      border-left: solid white 2px;
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+      color: white; }
+      .accueil-tondeur-container .container-reponses .list-reponses .details-reponse a {
+        color: white;
+        font-weight: bold;
+        text-decoration: none; }
+      .accueil-tondeur-container .container-reponses .list-reponses .details-reponse .reponse-choix {
+        text-align: right;
+        margin-top: 0.4rem;
+        width: 50%; }
+        .accueil-tondeur-container .container-reponses .list-reponses .details-reponse .reponse-choix a {
+          margin-left: 4rem; }
 
 .form-container {
   width: 70%;

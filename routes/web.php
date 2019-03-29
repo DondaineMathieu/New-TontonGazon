@@ -24,4 +24,8 @@ Route::post('/creer-annonce', 'CreerAnnonceController@create')->name('creerAnnon
 Route::get('/creer-annoncetype', 'MonControlleur@creerAnnoncetype')->name('creerAnnoncetype');
 Route::post('/creer-annoncetype', 'CreerAnnonceController@createtype')->name('creerAnnoncetype');
 
+Route::get('/reponse-annuler/{id}', 'MonControlleur@reponseAnnuler');
+Route::get('/reponse-refuser/{id}', 'MonControlleur@reponseRefuser');
+Route::get('/reponse-accepter/{id}', 'MonControlleur@reponseAccepter');
+
 Route::get('/logout', 'MonControlleur@logout');

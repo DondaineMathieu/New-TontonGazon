@@ -52,4 +52,20 @@ class MonControlleur extends Controller
         Auth::logout();
         return view("index");
     }
+
+    public function reponseAnnuler($id) {
+        Reponse::where('id', $id)->update(array('etat' => 'Annuler'));
+        return view("index");
+    }
+
+    public function reponseRefuser($id) {
+        Reponse::where('id', $id)->update(array('etat' => 'Refuser'));
+        return view("index");
+    }
+
+    public function reponseAccepter($id) {
+        Reponse::where('id', $id)->update(array('etat' => 'Accepter'));
+        return view("index");
+    }
+
 }

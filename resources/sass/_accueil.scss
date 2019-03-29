@@ -108,6 +108,31 @@
         font-weight: 600;
         font-size:3rem;
     }
+    .container-reponses {
+        .list-reponses {
+            border-left: solid white 4px;
+            padding-left: 0.75rem;
+            .details-reponse {
+                border-left: solid white 2px;
+                padding-left: 1.5rem;
+                margin: 1rem 0 ; 
+                color: white;
+                a {
+                    color:white;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+                .reponse-choix {
+                    text-align: right;
+                    margin-top: 0.4rem;
+                    width: 50%;
+                    a {
+                        margin-left: 4rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 

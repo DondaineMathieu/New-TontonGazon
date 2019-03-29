@@ -64,8 +64,8 @@
                         <a href="utilisateur/{{$r->id_tondeur}}"> {{$u->prenom}} </a>
                         souhaite repondre à votre annonce : <a href="annonce/{{$a->id}}">{{$a->titre}}</a> <br />
                         <div class="reponse-choix">
-                            <a id="reponse-accepeter" href="/reponse/accepter"> Accepter </a>
-                            <a id="reponse-refuser" href="/reponse/refuser"> Refuser </a>
+                            <a id="reponse-accepeter" href="/reponse-accepter/{{$r->id}}"> Accepter </a>
+                            <a id="reponse-refuser" href="/reponse-refuser/{{$r->id}}"> Refuser </a>
                         </div>
                     </div>
                 </div>
@@ -123,14 +123,20 @@
 <div class="accueil-tondeur-container">
     <div class="accueil-tondeur-bonjour">Bonjour <b>{{Auth::user()->prenom}},</b></div>
 
-    <div class="list-reponse">
-        @foreach($reponses as $r)
-        @foreach ($annonces as $a)
-            @if($r->id_tondeur == Auth::user()->id && $a->id == $r->id_annonce)
-            ADFRSGFSFDGQSFDQFSDQFSDQFDSQSDFQFSDQFSDQFDSFQDSQSDF
-            @endif
-        @endforeach
-        @endforeach
+    <div class="container-reponses">
+        <div class="accueil-titre">Reponses a vos demandes : </div>
+        <div class="list-reponses">
+            @foreach($reponses as $r)
+            @foreach ($annonces as $a)
+                @if($r->id_tondeur == Auth::user()->id && $a->id == $r->id_annonce)
+                    <div class="details-reponse">
+                        <div>Votre réponse à "{{$a->titre}}" est toujours en attente</div>
+                    <a href="/reponse-annuler/{{$r->id}}">Annuler</a>
+                    </div>
+                @endif
+            @endforeach
+            @endforeach
+        </div>
     </div>
 </div>
 @endguest
