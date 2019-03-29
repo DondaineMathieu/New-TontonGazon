@@ -19,14 +19,13 @@ class DatabaseSeeder extends Seeder
             'prenom' => "Mathieu",
             'email' => 'tondeur1@gmail.com',
             'password' => bcrypt('azerty'),
-            'tel' => '1234567890',
-            'ville' => 'Ma Ville',
-            'code_postal' => '12346',
-            'adresse1' => '41 chez moi',
+            'tel' => '0602733438',
+            'ville' => 'Auchy-les-mines',
+            'code_postal' => '62138',
+            'adresse1' => '43  rue Alphonse Daudet',
             'role' => 'tondeur',
             'grade' => 'Tondeur validé',
         ]);
-
 
         DB::table('users')->insert([
             'nom' => "Pierru",
@@ -91,27 +90,75 @@ class DatabaseSeeder extends Seeder
             // Les demandes
 
         DB::table('demande')->insert([
+            'id_tondu' => "3",
+            'titre' => 'Petit jardi à la campagne',
+            'texte' => 'Ceci est l\annonceType de l\'user 3. Petit jardin de campagne a venir entretenir tout les WeekEnd car sinon mes vaches mangent toute ma pelouse',
+            'surface' => '100',
+            'prix' => '25',
+        ]);
+        DB::table('demande')->insert([
+            'id_tondu' => "3",
+            'date_tonte' => '2019-01-12',
+            'titre' => 'Petit jardi à la campagne',
+            'texte' => 'Petit jardin de campagne a venir entretenir tout les WeekEnd car sinon mes vaches mangent toute ma pelouse',
+            'surface' => '100',
+            'prix' => '25',
+        ]);  
+        DB::table('demande')->insert([
+            'id_tondu' => "3",
+            'date_tonte' => '2018-12-21',
+            'titre' => 'Petit jardi à la campagne',
+            'texte' => 'Petit jardin de campagne a venir entretenir tout les WeekEnd car sinon mes vaches mangent toute ma pelouse',
+            'surface' => '100',
+            'prix' => '25',
+        ]);
+        DB::table('demande')->insert([
+            'id_tondu' => "3",
+            'date_tonte' => '2019-04-22',
+            'titre' => 'Petit jardi à la campagne',
+            'texte' => 'Petit jardin de campagne a venir entretenir tout les WeekEnd car sinon mes vaches mangent toute ma pelouse',
+            'surface' => '100',
+            'prix' => '25',
+        ]);
+        DB::table('demande')->insert([
+            'id_tondu' => "3",
+            'date_tonte' => '2019-06-27',
+            'titre' => 'Jardin de grande maison en campagne',
+            'texte' => 'Cette année à cause d\'une chute dans les escaliers, je ne pourrais pas tondre le jardin de ma chère et tendre belle mère, je cherche donc un volontaire pour aller la supporter et tondre son jardin',
+            'surface' => '210',
+            'prix' => '60',
+        ]);
+
+        DB::table('demande')->insert([
             'id_tondu' => "4",
-            'date_tonte' => '2019-04-21',
-            'titre' => 'Une premiere annonce de test',
-            'texte' => 'spiritus miscere ad feris bella vehementer hac miscere adfligebat proruperunt est erigentes capiti Iconium peius capiti raris feris Namque inopinis raris motibus sunt adfligebat amphitheatrali motibus indignitate Isauri feris.',
-            'surface' => '556',
-            'prix' => '1506',
+            'titre' => 'Jardin vers Saille',
+            'texte' => 'tonte d\'un petit jardin dans la ville de Saille, dans le département dans la Loire ',
+            'surface' => '50',
+            'prix' => '20',
         ]);
         DB::table('demande')->insert([
-            'id_tondu' => "3",
-            'date_tonte' => '2019-03-19',
-            'titre' => 'Une deuxieme annonce de test',
-            'texte' => ' enim per quam per magis tributaria et piget dicere quam hausto aerarii est ordo deleto angustias repetetur et socio sunt populum facta angustias et hostiles hausto magis avide Ptolomaeo proscribi.',
-            'surface' => '896',
-            'prix' => '265',
+            'id_tondu' => "4",
+            'date_tonte' => '2019-11-14',
+            'titre' => 'Jardin vers Saille',
+            'texte' => 'tonte d\'un petit jardin dans la ville de Saille, dans le département dans la Loire ',
+            'surface' => '50',
+            'prix' => '20',
         ]);
         DB::table('demande')->insert([
-            'id_tondu' => "3",
-            'titre' => 'Une annonce type pour l\'utilisateur3',
-            'texte' => 'la description de lannonce type de lutilisateur 3',
-            'surface' => '1212',
-            'prix' => '424',
+            'id_tondu' => "4",
+            'date_tonte' => '2019-04-01',
+            'titre' => 'Jardin de Versailles',
+            'texte' => 'Je vais rentrer à mon domicile principal qui est le chateau de Versaille pour les vacances de paques et j\'aimerai qua mon retour le jardin soit bien tondu',
+            'surface' => '8000000',
+            'prix' => '500',
+        ]);
+        DB::table('demande')->insert([
+            'id_tondu' => "4",
+            'date_tonte' => '2019-05-09',
+            'titre' => 'Jardin vers Saille',
+            'texte' => 'tonte d\'un petit jardin dans la ville de Saille, dans le département dans la Loire ',
+            'surface' => '50',
+            'prix' => '20',
         ]);
 
             // Les reponses

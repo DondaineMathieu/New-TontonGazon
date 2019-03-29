@@ -26,7 +26,7 @@ class CreerAnnonceController extends Controller
 
     protected function createtype(Request $request)
     {
-        DemandeType::create([
+        Demande::create([
             'titre' => $request->input('titre'),
             'texte' => $request->input('texte'),
             'surface' => $request->input('surface'),

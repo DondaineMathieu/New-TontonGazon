@@ -100,18 +100,6 @@
                         @else
                         @endif
                     @endforeach
-                    {{-- @foreach ($annonces as $a)
-                    @if($a->id_tondu == Auth::user()->id && $a->date_tonte <= $todayDate )
-                    <div style="display:none">{{$annoncesPassee=true}}</div>
-                    <div class="annonce-solo">
-                        <div class="titre-annonce">{{$a->titre}}</div>
-                        <div class="texte-annonce">{{$a->texte}}</div>
-                        <div class="lien-annonce"><a href="/annonce/{{$a->id}}">Voir l'annonce ></a></div>
-                    </div>
-                    @endif
-                    @if($annoncesPassee==false)
-                        <div></div>
-                    @endif --}}
                 </div>
             </div>
 
