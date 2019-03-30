@@ -138,6 +138,22 @@
             @endforeach
         </div>
     </div>
+
+    <div class="container-statistiques">
+        <div class="accueil-titre">Statistiques :</div>
+        <div style="display:none;">{{$totalReponses=0}}{{$totalValider=0}}{{$totalRefuser=0}}{{$totalWainting=0}}</div>
+        <div>
+            Vous avez répondu à @foreach($reponses as $r) @if($r->id_tondeur == Auth::user()->id) <div style="display:none;">{{$totalReponses=$totalReponses+1}}</div> @endif @endforeach <b>{{$totalReponses}} annonce(s)</b>
+            Vous avez tondu @foreach($reponses as $r) @if($r->id_tondeur == Auth::user()->id && $r->etat == "Valider") <div style="display:none;">{{$totalValider=$totalValider+1}}</div> @endif @endforeach <b>{{$totalValider}} tondu(s)</b>
+            @foreach($reponses as $r) @if($r->id_tondeur == Auth::user()->id && $r->etat == "Refuser") <div style="display:none;">{{$totalRefuser=$totalRefuser+1}}</div> @endif @endforeach <b>{{$totalRefuser}}</b> de vos reponses on été <b>refusées</b>
+            Vous avez @foreach($reponses as $r) @if($r->id_tondeur == Auth::user()->id && $r->etat == "Waiting") <div style="display:none;">{{$totalWainting=$totalWainting+1}}</div> @endif @endforeach <b>{{$totalWainting}}</b> reponses en <b>attente de reponse</b>
+        </div>
+    </div> 
+
+    <div id="footer-img">
+        @include('Elements/_footer-img')
+    </div>
+
 </div>
 @endguest
 </div>
