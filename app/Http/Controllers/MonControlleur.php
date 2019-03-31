@@ -72,4 +72,8 @@ class MonControlleur extends Controller
         return view("conditions");
     }
 
+    public function politiqueConfidentialite() {
+        return view("politique");
+    }
+
 }

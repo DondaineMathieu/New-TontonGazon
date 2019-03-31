@@ -29,5 +29,6 @@ Route::get('/reponse-refuser/{id}', 'MonControlleur@reponseRefuser');
 Route::get('/reponse-accepter/{id}', 'MonControlleur@reponseAccepter');
 
 Route::get('/conditions-utilisation', 'MonControlleur@conditionsUtilisation');
+Route::get('/politique-confidentialite', 'MonControlleur@politiqueConfidentialite');
 
 Route::get('/logout', 'MonControlleur@logout');

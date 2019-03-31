@@ -296,19 +296,36 @@ footer {
 /* CSS pour mobile */
 .container-legal {
   width: 70%;
-  padding: 2rem;
+  padding: 2rem 0rem;
   margin-right: auto;
   margin-left: auto; }
   .container-legal h2 {
-    font-size: 4rem;
+    font-size: 3.6rem;
     margin-bottom: 1.4rem; }
   .container-legal ul li {
     list-style-type: none;
     margin-bottom: 1.2rem;
+    line-height: 1.4;
     text-align: justify;
     text-justify: inter-word; }
     .container-legal ul li b {
       font-size: 2rem; }
+    .container-legal ul li i {
+      font-size: 1.4rem;
+      font-style: normal;
+      font-weight: bold; }
+    .container-legal ul li ul {
+      padding-left: 3rem; }
+      .container-legal ul li ul li {
+        margin-bottom: 0;
+        list-style-type: disc; }
+
+@media screen and (max-width: 640px) {
+  .container-legal h2 {
+    font-size: 2.8rem; }
+  .container-legal ul li {
+    text-align: left;
+    line-height: 1.6; } }
 
 * {
   padding: 0;

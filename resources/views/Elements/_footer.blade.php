@@ -23,7 +23,7 @@
             <ul>
                 <li><b class="titrefooter">Mentions légales</b></li>
                 <li><a href="/conditions-utilisation">Conditions générales d’utilisation</a></li>
-                <li><a href="">Politique de confidentialité et de respect de la vie privée</a></li>
+                <li><a href="/politique-confidentialite">Politique de confidentialité et de respect de la vie privée</a></li>
                 <li><a href="">Référencement, classement des annonces et contrôle des avis</a></li>
                 <li><a href="">Mentions légales</a></li>
                 <li><a href="">Assurance</a></li>
