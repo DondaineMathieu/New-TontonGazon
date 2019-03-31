@@ -68,4 +68,8 @@ class MonControlleur extends Controller
         return view("index");
     }
 
+    public function conditionsUtilisation() {
+        return view("conditions");
+    }
+
 }

@@ -1,0 +1,20 @@
+.container-legal {
+    width:70%;
+    padding:2rem;
+    margin-right: auto; margin-left: auto;
+    h2 {
+        font-size:4rem;
+        margin-bottom:1.4rem;
+    }
+    ul {
+        li {
+            list-style-type: none;
+            margin-bottom:1.2rem;
+            text-align: justify;
+            text-justify: inter-word;
+            b {
+                font-size:2rem;
+            }
+        }
+    }
+}

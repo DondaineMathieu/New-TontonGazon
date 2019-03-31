@@ -294,6 +294,22 @@ footer {
         text-decoration: underline; }
 
 /* CSS pour mobile */
+.container-legal {
+  width: 70%;
+  padding: 2rem;
+  margin-right: auto;
+  margin-left: auto; }
+  .container-legal h2 {
+    font-size: 4rem;
+    margin-bottom: 1.4rem; }
+  .container-legal ul li {
+    list-style-type: none;
+    margin-bottom: 1.2rem;
+    text-align: justify;
+    text-justify: inter-word; }
+    .container-legal ul li b {
+      font-size: 2rem; }
+
 * {
   padding: 0;
   margin: 0;

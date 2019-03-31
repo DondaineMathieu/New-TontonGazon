@@ -3,9 +3,8 @@
         <div id="footer-col-1">
             <ul>
                 <li><b class="titrefooter">Questions fréquentes</b></li>
-                <li><a href="">Poster une demande</a></li>
-                <li><a href="">Répondre à une demande</a></li>
-                <li><a href="">Voir la liste des demandes</a></li>
+                <li><a href="/creer-annonce">Poster une demande</a></li>
+                <li><a href="/annonces">Voir la liste des demandes</a></li>
                 <li><a href="">Comment fonctionne le paiement en ligne ?</a></li>
                 <li><a href="">Toutes les questions</a></li>
             </ul>
@@ -23,7 +22,7 @@
         <div id="footer-col-3">
             <ul>
                 <li><b class="titrefooter">Mentions légales</b></li>
-                <li><a href="">Conditions générales d’utilisation</a></li>
+                <li><a href="/conditions-utilisation">Conditions générales d’utilisation</a></li>
                 <li><a href="">Politique de confidentialité et de respect de la vie privée</a></li>
                 <li><a href="">Référencement, classement des annonces et contrôle des avis</a></li>
                 <li><a href="">Mentions légales</a></li>
