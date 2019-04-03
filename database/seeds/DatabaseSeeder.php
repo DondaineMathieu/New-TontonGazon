@@ -66,6 +66,19 @@ class DatabaseSeeder extends Seeder
             'grade' => 'apprenti tondu',
         ]);
 
+        DB::table('users')->insert([
+            'nom' => "Dondaine",
+            'prenom' => "Mathieu",
+            'email' => 'mathieu-le-tondeur@gmail.com',
+            'password' => bcrypt('azerty'),
+            'tel' => '0602733438',
+            'ville' => 'Armentieres',
+            'code_postal' => '59280',
+            'adresse1' => 'Rue du travailleur',
+            'role' => 'tondeur',
+            'grade' => 'apprenti maitre',
+        ]);
+
 
             // Les avis
 
