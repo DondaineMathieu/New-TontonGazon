@@ -85,7 +85,7 @@
             {{-- Confirm mot de passe de l'utilisateur --}}
             <div class="form-group">
                 <label for="password-confirm"
-                    class="form-label"><b>{{ __('Confirmer le mot de passe') }}</b></label>
+                    class="form-label"><b>{{ __('Repeter mot de passe') }}</b></label>
 
                 <div class="form-group-input">
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
