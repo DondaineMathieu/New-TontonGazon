@@ -57,22 +57,22 @@ class MonControlleur extends Controller
 
     public function logout() {
         Auth::logout();
-        return view("index");
+        return redirect()->action('MonControlleur@index');
     }
 
     public function reponseAnnuler($id) {
         Reponse::where('id', $id)->update(array('etat' => 'Annuler'));
-        return view("index");
+        return redirect()->action('MonControlleur@index');
     }
 
     public function reponseRefuser($id) {
         Reponse::where('id', $id)->update(array('etat' => 'Refuser'));
-        return view("index");
+        return redirect()->action('MonControlleur@index');
     }
 
     public function reponseAccepter($id) {
         Reponse::where('id', $id)->update(array('etat' => 'Accepter'));
-        return view("index");
+        return redirect()->action('MonControlleur@index');
     }
 
 
