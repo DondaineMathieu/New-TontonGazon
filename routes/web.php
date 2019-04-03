@@ -28,7 +28,16 @@ Route::get('/reponse-annuler/{id}', 'MonControlleur@reponseAnnuler');
 Route::get('/reponse-refuser/{id}', 'MonControlleur@reponseRefuser');
 Route::get('/reponse-accepter/{id}', 'MonControlleur@reponseAccepter');
 
+Route::get('/paiement-en-ligne', 'MonControlleur@paiementLigne');
+Route::get('/qui-sommes-nous', 'MonControlleur@quiSommesNous');
+Route::get('/pourquoi-tonton-gazon', 'MonControlleur@pourquoiTG');
+Route::get('/contact', 'MonControlleur@contact');
+Route::get('/recrutement', 'MonControlleur@recrutement');
 Route::get('/conditions-utilisation', 'MonControlleur@conditionsUtilisation');
 Route::get('/politique-confidentialite', 'MonControlleur@politiqueConfidentialite');
+Route::get('/referencement-controle', 'MonControlleur@referencementControle');
+Route::get('/mentions-legales', 'MonControlleur@mentions');
+Route::get('/plan-du-site', 'MonControlleur@plan');
+Route::get('/utilisateur/vos-donnees/{id}', 'MonControlleur@plan');
 
 Route::get('/logout', 'MonControlleur@logout');

@@ -68,12 +68,15 @@ class MonControlleur extends Controller
         return view("index");
     }
 
-    public function conditionsUtilisation() {
-        return view("conditions");
-    }
 
-    public function politiqueConfidentialite() {
-        return view("politique");
-    }
-
+    public function paiementLigne() { return view("footer/paiement"); }
+    public function quiSommesNous() { return view("footer/quiSommesNous"); }
+    public function pourquoiTG() { return view("footer/pourquoiTG"); }
+    public function contact() { return view("footer/contact"); }
+    public function recrutement() { return view("footer/recrutement"); }
+    public function conditionsUtilisation() { return view("footer/conditions"); }
+    public function politiqueConfidentialite() { return view("footer/politique"); }
+    public function referencementControle() { return view("footer/referencement"); }
+    public function mentions() { return view("footer/mentions"); }
+    public function plan() { return view("footer/plan"); }
 }

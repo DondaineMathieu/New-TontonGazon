@@ -126,6 +126,10 @@ footer {
       #footer div ul li .titrefooter {
         font-size: 1.4rem; } }
 
+.accueil-guest-container .accueil-container-top {
+  background: url("../img/jardin.JPG") no-repeat 100% bottom;
+  color: white; }
+
 .accueil-tondu-container {
   padding: 2rem 2rem 20% 2rem;
   position: relative;
@@ -326,6 +330,9 @@ footer {
   .container-legal ul li {
     text-align: left;
     line-height: 1.6; } }
+
+body {
+  background-color: #FFFDF0; }
 
 * {
   padding: 0;

@@ -1,6 +1,11 @@
 <div>
     @guest
     <div class="accueil-guest-container">
+        <div class="accueil-container-top">
+            <img alt="" src=""/>
+            <h1> Bienvenue sur Tonton Gazon !</h1>
+            <h2> Site de mise en relation de particulier pour la tonte de gazon</h2>
+        </div>
         <div class="bienvenu">Guest</div>
     </div>
 
