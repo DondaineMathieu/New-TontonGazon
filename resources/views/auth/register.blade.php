@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="form-container">
-    <h1>{{ __('Register') }}</h1>
+    <h1>Inscription</h1>
 
         <form method="POST" action="{{ route('register') }}">
             @csrf
@@ -158,23 +158,27 @@
             {{-- Fin code_postal de l'utilisateur --}}
             
             {{-- role de l'utilisateur --}}
-            <div class="form-group">
+            <div class="form-group-checkbox">
 
                 <div class="form-group-input">
-                    <input id="role_tondu" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="tondu"> <label for="role_tondu" class="form-label"><b>{{ __('Tondu') }}</b></label>
-                    <input id="role_tondeur" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="tondeur"> <label for="role_tondeur" class="form-label"><b>{{ __('Tondeur') }}</b></label>
-
+                    <div class="form-radio" > <input id="role_tondeur" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="tondeur"> <label for="role_tondeur" class="form-label"><b>{{ __('Tondeur') }}</b></label></div>
+                    <div class="form-radio"> <input id="role_tondu" type="radio" class="form-control{{ $errors->has('code_postal') ? ' is-invalid' : '' }}" name="role" value="tondu"> <label for="role_tondu" class="form-label"><b>{{ __('Tondu') }}</b></label></div>
                 </div>
             </div>
             {{-- Fin role de l'utilisateur --}}
 
-            <div class="form-group">
-                <div class="btn btn-primary">
-                    <button type="submit" class="btn btn-primary">
-                        {{ __('C\'est parti !') }}
-                    </button>
-                </div>
+            <div class="form-submit">
+                <button type="submit">
+                    {{ __('C\'est parti !') }}
+                </button>
             </div>
+
+            <div class="deja-compte">
+                <a href="{{ route('login') }}">
+                    J'ai déja un compte
+                </a>
+            <div>
+
         </form>
     </div>
 </div>

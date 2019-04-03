@@ -2,13 +2,13 @@
 
 @section('content')
 <div class="form-container">
-    <h1>{{ __('Login') }}</h1>
+    <h1> Connexion </h1>
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
         <div class="form-group">
-            <label for="email" class="form-label"><b>{{ __('E-Mail Address') }}</b></label>
+            <label for="email" class="form-label"><b>Adresse Mail</b></label>
 
             <div class="form-group-input">
                 <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}"
@@ -23,7 +23,7 @@
         </div>
 
         <div class="form-group">
-            <label for="password" class="form-label"><b>{{ __('Password') }}</b></label>
+            <label for="password" class="form-label"><b>Mot de passe</b></label>
 
             <div class="form-group-input">
                 <input id="password" type="password" placeholder="azerty123456"
@@ -42,7 +42,7 @@
                 {{ old('remember') ? 'checked' : '' }}>
 
             <label class="form-check-label" for="remember">
-                {{ __('Remember Me') }}
+                Se souvenir de moi
             </label>
         </div>
 

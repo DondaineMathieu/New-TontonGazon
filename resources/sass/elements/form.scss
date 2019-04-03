@@ -73,8 +73,50 @@
             }
         }
 
+        .deja-compte {
+            text-align: center;
+            a {
+                text-decoration: none;
+                padding-top:0.4rem;
+                font-size: 0.8rem;
+                color: grey;
+            } a:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .form-group-checkbox {
+            .form-group-input {
+                .form-radio {
+                    display:inline-block;
+                    width:40%;
+                    text-align: center;
+                    label {
+                        b {
+                            color: grey;
+                        }
+                    }
+                } .form-radio:first-child {
+                    text-align: right;
+                }
+            }
+        }
+
     }
 }
 
-/* CSS pour mobile */
-@media screen and (max-width: 640px) { }
+@media screen and (max-width: 640px) {
+    .form-container {
+        width:90%;
+        form {
+            .form-group {
+                display: block;
+                label {
+                    b {
+                        display:block;
+                    }
+                }
+            }
+        }
+    }
+}

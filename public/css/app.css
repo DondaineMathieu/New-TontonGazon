@@ -296,8 +296,32 @@ footer {
         color: grey; }
       .form-container form .form-reset a:hover {
         text-decoration: underline; }
+    .form-container form .deja-compte {
+      text-align: center; }
+      .form-container form .deja-compte a {
+        text-decoration: none;
+        padding-top: 0.4rem;
+        font-size: 0.8rem;
+        color: grey; }
+      .form-container form .deja-compte a:hover {
+        text-decoration: underline; }
+    .form-container form .form-group-checkbox .form-group-input .form-radio {
+      display: inline-block;
+      width: 40%;
+      text-align: center; }
+      .form-container form .form-group-checkbox .form-group-input .form-radio label b {
+        color: grey; }
+    .form-container form .form-group-checkbox .form-group-input .form-radio:first-child {
+      text-align: right; }
 
-/* CSS pour mobile */
+@media screen and (max-width: 640px) {
+  .form-container {
+    width: 90%; }
+    .form-container form .form-group {
+      display: block; }
+      .form-container form .form-group label b {
+        display: block; } }
+
 .container-information {
   width: 70%;
   padding: 2rem 0rem;
