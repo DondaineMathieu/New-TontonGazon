@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-legal" id="conditions-generales">
+<div class="container-information" id="politique-confidentialite">
     <h2> Politique de confidentialité et de respect de la vie privée </h2>
 
     <ul >

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="container-legal" id="conditions-generales">
+<div class="container-information" id="conditions-generales">
     <h2> Conditions générales d'utilisation </h2>
 
     <ul >
@@ -37,7 +37,6 @@
         </li>
     </ul>
         
-
 </div>
 
 

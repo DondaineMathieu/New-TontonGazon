@@ -5,7 +5,7 @@
                 <li><b class="titrefooter">Questions fréquentes</b></li>
                 <li><a href="/creer-annonce">Poster une demande</a></li>
                 <li><a href="/annonces">Voir la liste des demandes</a></li>
-                <li><a href="">Comment fonctionne le paiement en ligne ?</a></li>
+                <li><a href="/paiement-en-ligne">Comment fonctionne le paiement en ligne ?</a></li>
             </ul>
         </div>
         <div id="footer-col-2">
@@ -30,9 +30,12 @@
         <div id="footer-col-4">
             <ul>
                 <li><b class="titrefooter">Gestion de compte</b></li>
-                <li><a href="utilisateur/{{ Auth::user()->id }}">Mon profil</a></li>
-                <li><a href="utilisateur/vos-donnees/{{ Auth::user()->id }}">Accéder à mes données</a></li>
-                <li><a href=""></a></li>
+                @guest
+                <li> <a href="{{ route('register') }}">Creer un compte</a>
+                @else
+                <li><a href="/utilisateur/{{ Auth::user()->id }}">Mon profil</a></li>
+                <li><a href="/utilisateur/vos-donnees/{{ Auth::user()->id }}">Accéder à mes données</a></li>
+                @endguest
             </ul>
         </div>
         <div id="footer-col-5">
