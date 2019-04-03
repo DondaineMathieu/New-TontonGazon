@@ -19,10 +19,13 @@ Route::get('/', 'MonControlleur@index');
 Route::get('/utilisateur/{id}', 'MonControlleur@utilisateur')->where('id','[0-9]+');
 Route::get('/annonces', 'MonControlleur@annonces');
 Route::get('/annonce/{id}', 'MonControlleur@annonce');
+
 Route::get('/creer-annonce', 'MonControlleur@creerAnnonce')->name('creerAnnonce');
 Route::post('/creer-annonce', 'CreerAnnonceController@create')->name('creerAnnonce');
 Route::get('/creer-annoncetype', 'MonControlleur@creerAnnoncetype')->name('creerAnnoncetype');
 Route::post('/creer-annoncetype', 'CreerAnnonceController@createtype')->name('creerAnnoncetype');
+Route::get('/supprimer-annoncetype', 'MonControlleur@supprimerAnnonceType');
+
 
 Route::get('/reponse-annuler/{id}', 'MonControlleur@reponseAnnuler');
 Route::get('/reponse-refuser/{id}', 'MonControlleur@reponseRefuser');

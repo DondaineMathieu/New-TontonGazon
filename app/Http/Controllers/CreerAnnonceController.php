@@ -3,7 +3,6 @@
 namespace TontonGazon\Http\Controllers;
 
 use TontonGazon\Demande;
-use TontonGazon\DemandeType;
 use TontonGazon\Http\Controllers\Controller;
 use Illuminate\Http\Request; 
 use TontonGazon\User;
@@ -21,7 +20,7 @@ class CreerAnnonceController extends Controller
             'date_tonte' => $request->input('date_tonte'),
             'id_tondu' => \Auth::user()->id,
         ]);
-        return view('home');
+        return redirect()->action('MonControlleur@index');
     }
 
     protected function createtype(Request $request)
@@ -33,6 +32,6 @@ class CreerAnnonceController extends Controller
             'prix' => $request->input('prix'),
             'id_tondu' => \Auth::user()->id,
         ]);
-        return view('home');
+        return redirect()->action('MonControlleur@index');
     }
 }
