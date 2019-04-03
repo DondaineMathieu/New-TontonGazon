@@ -46,7 +46,8 @@ class MonControlleur extends Controller
     }
 
     public function creerAnnoncetype() {
-        return view('creer_annoncetype');
+        $annonceType = Demande::whereRaw('date_tonte is NULL AND id_tondu=?', [Auth::id()])->get()->first();
+        return view('creer_annoncetype',['annonceType' => $annonceType]);
     }
 
     public function logout() {
