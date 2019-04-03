@@ -52,7 +52,7 @@ class MonControlleur extends Controller
 
     public function supprimerAnnonceType() {
         $annonceType = Demande::whereRaw('date_tonte is NULL AND id_tondu=?', [Auth::id()])->delete();
-        return view('index');
+        return redirect()->action('MonControlleur@index');
     }
 
     public function logout() {
