@@ -75,7 +75,7 @@ class MonControlleur extends Controller
         ]);
         return redirect()->action('MonControlleur@index');
     } public function reponseAnnuler($id) {
-        Reponse::where('id', $id)->update(array('etat' => 'Annuler'));
+        Reponse::where('id', $id)->delete();
         return redirect()->action('MonControlleur@index');
     } public function reponseRefuser($id) {
         Reponse::where('id', $id)->update(array('etat' => 'Refuser'));
