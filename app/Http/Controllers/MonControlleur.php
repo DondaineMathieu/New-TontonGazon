@@ -61,17 +61,26 @@ class MonControlleur extends Controller
         return redirect()->action('MonControlleur@index');
     }
 
-    public function reponseAnnuler($id) {
+
+    public function reponsePostuler($id) {
+        $id_tondu = Demande::select('id_tondu WHERE id=?', $id);
+        Reponse::create([
+            'id_annonce' => $id,
+            'id_tondu' => 1,    // Actuellement cela ne fonctionne pas
+                                // je pense que cela devrai marchai avec le $id_tondu
+                                // Mais visiblement il n'aime pas
+            'id_tondeur' => Auth::id(),
+            'date_reponse' => Carbon::now(),
+            'etat' => 'En Attente',
+        ]);
+        return redirect()->action('MonControlleur@index');
+    } public function reponseAnnuler($id) {
         Reponse::where('id', $id)->update(array('etat' => 'Annuler'));
         return redirect()->action('MonControlleur@index');
-    }
-
-    public function reponseRefuser($id) {
+    } public function reponseRefuser($id) {
         Reponse::where('id', $id)->update(array('etat' => 'Refuser'));
         return redirect()->action('MonControlleur@index');
-    }
-
-    public function reponseAccepter($id) {
+    } public function reponseAccepter($id) {
         Reponse::where('id', $id)->update(array('etat' => 'Accepter'));
         return redirect()->action('MonControlleur@index');
     }

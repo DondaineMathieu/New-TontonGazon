@@ -9,7 +9,16 @@
         <p> <b> Surface a tondre : </b> <i> {{$annonce->surface}} m² </i></p>
         <p> <b> Vous serez payé : </b> <i> {{$annonce->prix}} € </i></p>
     </div>
-    <button id="postuler">Postuler</button>
+    
+    @guest
+    <div> Vous devez etre connecté avant de postuler à une demande </div>
+    <a href="/login">Se connecter</a>
+    <a href="/register">Creer un compte</a>
+    @else
+    <a href="/reponse-postuler/{{$annonce->id}}"><button id="postuler">Postuler</button></a>
+    @endguest
+    
+        
 </div>
 
 @endsection
