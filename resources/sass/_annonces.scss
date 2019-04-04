@@ -17,6 +17,7 @@
             li {
                 list-style: none;
                 a {
+                    font-size:1.2rem;
                     color: black;
                     font-weight: bold;
                 }
@@ -25,6 +26,51 @@
     }
     #list-terminees, #list-type { display: none; }
 }
+
+.detail-annonce {
+    width: 50%;
+    margin-right:auto;
+    margin-left:auto;
+    display:flex;
+    flex-direction: column;
+    h2 {
+        text-align:center;
+        margin:1rem 0rem;
+    }
+    p {
+        margin-top:1rem;
+        display: flex;
+        flex-direction: row;
+        margin-bottom:0.6rem;
+        justify-content: center;
+        b {
+            width: auto;
+            text-align:right;
+            flex:0.4;
+            padding-bottom:5px;
+            padding-left: 15px;
+            border-bottom: 1px solid grey;
+        }
+        i {
+            margin-left:0.4rem;
+            flex:0.6;
+        }
+    }
+}
+
+button {
+    margin-top:1rem;
+    display: block;
+    margin-right:auto;
+    margin-left:auto;
+    border:1px solid grey;
+    background-color: #468a3f;
+    border-radius: 10px;
+    font-weight: bold;
+    color:white;
+    padding: 0.5rem 1rem;
+}
+
 
 @media screen and (max-width: 640px) {
     .annonce-list {

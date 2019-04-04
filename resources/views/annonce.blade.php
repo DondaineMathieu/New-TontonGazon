@@ -3,11 +3,13 @@
 @section('content')
 
 <div class="main-content">
-
-    <h1> {{$annonce->titre}} </h1>
-    <h2> {{$annonce->texte}} </h2>
-    <p> Surface a tondre : {{$annonce->surface}} m²</p>
-    <p> vous serai payé : {{$annonce->prix}} €</p>
+    <div class="detail-annonce">
+        <h2> {{$annonce->titre}} </h2>
+        <p> <b> Description de l'annonce :</b> <i> {{$annonce->texte}}  </i></p>
+        <p> <b> Surface a tondre : </b> <i> {{$annonce->surface}} m² </i></p>
+        <p> <b> Vous serez payé : </b> <i> {{$annonce->prix}} € </i></p>
+    </div>
+    <button id="postuler">Postuler</button>
 </div>
 
 @endsection
