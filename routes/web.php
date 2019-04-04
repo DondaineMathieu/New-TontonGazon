@@ -41,6 +41,6 @@ Route::get('/politique-confidentialite', 'MonControlleur@politiqueConfidentialit
 Route::get('/referencement-controle', 'MonControlleur@referencementControle');
 Route::get('/mentions-legales', 'MonControlleur@mentions');
 Route::get('/plan-du-site', 'MonControlleur@plan');
-Route::get('/utilisateur/vos-donnees/{id}', 'MonControlleur@donneeUtilisateur');
+Route::get('/utilisateur/vos-donnees', 'MonControlleur@donneeUtilisateur');
 
 Route::get('/logout', 'MonControlleur@logout');
