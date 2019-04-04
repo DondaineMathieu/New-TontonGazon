@@ -1,17 +1,27 @@
 /* CSS pour PC (en dessous) */
-#menu-toogle {
-  background-color:$vert;
-  display : flex;
-  flex-direction: row;
-  justify-content: flex-end;
+#menuToggle {
+  display:none;
 }
 
 nav.nav {
     background-color:$vert;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     font-family: sans-serif;
-    img {}
+    
+    #logo-menu {
+      display: inline-block;
+      img {
+        margin-left:1.4rem;
+        margin-top:0.2rem;
+        height: 1.5rem;
+      }
+    }
+    #titre {
+      display: inline-block;
+      color:white;
+      padding-bottom: 10px;
+    }
     
     button {
       display: none !important;
@@ -19,6 +29,7 @@ nav.nav {
 
     ul {
         display: flex;
+        justify-content: flex-end;
         list-style-type: none;
         margin-top:7px;
         margin-bottom:7px;
@@ -36,20 +47,42 @@ nav.nav {
 
 /* CSS pour mobile */
 @media screen and (max-width: 640px) { 
-  header {
-      flex-direction: column !important;
-    button {
-      display: inline-block !important;
+  #menuToggle {
+    display:inline-block;
+    background-color: $vert;
+    float: right;
+  }
+
+  nav.nav {
+    display: block;
+    #logo-menu {
+      display: inline-block;
+      img {
+        margin-left:0.4rem;
+        margin-top:0.2rem;
+        height: 3.2rem;
+      }
     }
-    nav {
+
+    #menu {
+      display:none;
       ul {
-        flex-direction: column !important;
+        display: block;
         li {
-            margin-left:auto;
+          margin:0;
+          a {
+            display: block;
             margin-right:auto;
-            padding:7px;
+            margin-left:auto;
+            width:50%;
+            text-align: center;
+            padding: 0.4rem;
+            border-bottom: 1px white solid;
+          } 
+        }li.li-last a {
+          border-bottom: none;
         }
       }
     }
-  }  
+  }
 }

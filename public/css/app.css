@@ -1,20 +1,28 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito");
 /* CSS pour PC (en dessous) */
-#menu-toogle {
-  background-color: #468a3f;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end; }
+#menuToggle {
+  display: none; }
 
 nav.nav {
   background-color: #468a3f;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   font-family: sans-serif; }
+  nav.nav #logo-menu {
+    display: inline-block; }
+    nav.nav #logo-menu img {
+      margin-left: 1.4rem;
+      margin-top: 0.2rem;
+      height: 1.5rem; }
+  nav.nav #titre {
+    display: inline-block;
+    color: white;
+    padding-bottom: 10px; }
   nav.nav button {
     display: none !important; }
   nav.nav ul {
     display: flex;
+    justify-content: flex-end;
     list-style-type: none;
     margin-top: 7px;
     margin-bottom: 7px; }
@@ -27,16 +35,34 @@ nav.nav {
 
 /* CSS pour mobile */
 @media screen and (max-width: 640px) {
-  header {
-    flex-direction: column !important; }
-    header button {
-      display: inline-block !important; }
-    header nav ul {
-      flex-direction: column !important; }
-      header nav ul li {
-        margin-left: auto;
-        margin-right: auto;
-        padding: 7px; } }
+  #menuToggle {
+    display: inline-block;
+    background-color: #468a3f;
+    float: right; }
+  nav.nav {
+    display: block; }
+    nav.nav #logo-menu {
+      display: inline-block; }
+      nav.nav #logo-menu img {
+        margin-left: 0.4rem;
+        margin-top: 0.2rem;
+        height: 3.2rem; }
+    nav.nav #menu {
+      display: none; }
+      nav.nav #menu ul {
+        display: block; }
+        nav.nav #menu ul li {
+          margin: 0; }
+          nav.nav #menu ul li a {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            width: 50%;
+            text-align: center;
+            padding: 0.4rem;
+            border-bottom: 1px white solid; }
+        nav.nav #menu ul li.li-last a {
+          border-bottom: none; } }
 
 #footer-img {
   width: 100%;
