@@ -27,6 +27,14 @@
     #list-terminees, #list-type { display: none; }
 }
 
+.not-possible {
+    margin-top: 4rem;
+    text-align: center;
+    a {
+        margin:1rem;
+    }
+}
+
 .detail-annonce {
     width: 50%;
     margin-right:auto;

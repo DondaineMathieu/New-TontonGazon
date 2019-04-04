@@ -1,11 +1,30 @@
 @extends('layouts.app')
 @section('content')
 <div class="main-content">
+
+@guest
+    <h1> Creer une annonce Type</h1>
+    <div class="not-possible">
+    <div>Vous ne pouvez pas créer d'annonce sans être connecté</div>
+    <a href="/login">Se connecter</a>
+    <a href="/register">Créer un compte</a>
+    </div>
+
+@elseif(Auth::user()->role == "tondeur")
+    <div class="not-possible">
+        <div> Les tondeurs ne peuvent pas créer une annonce </div>
+        <a href="/annonces">Voir les annonces</a>
+        <a href="/logout">Déconnexion</a>
+    </div>
+@else
+
     <div class="form-container">
     @if($annonceType == true)
+    <div class="not-possible">
         <h1> Vous avez deja une annonceType </h1>
         <a href="/creer-annonce">Creer une annonce</a>
         <a href="/supprimer-annoncetype">Supprimer votre annonce type</a>
+    </div>
     @else
     <h1> Creer une annonce Type</h1>
     <h2> Cela vous permettra de ne pas avoir a retaper a chaque fois une annonce</h2>
@@ -76,6 +95,7 @@
             </div>
     </form>
     @endif
+@endguest
 </div>
 
 @endsection

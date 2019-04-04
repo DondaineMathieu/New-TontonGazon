@@ -68,7 +68,8 @@ nav.nav {
 #footer-img {
   width: 100%;
   height: auto;
-  position: relative; }
+  position: relative;
+  margin-top: 2rem; }
   #footer-img svg {
     fill: white;
     width: 100%;
@@ -290,6 +291,12 @@ footer {
   .annonce-list #list-terminees, .annonce-list #list-type {
     display: none; }
 
+.not-possible {
+  margin-top: 4rem;
+  text-align: center; }
+  .not-possible a {
+    margin: 1rem; }
+
 .detail-annonce {
   width: 50%;
   margin-right: auto;
@@ -463,10 +470,6 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: sans-serif; }
-
-.main-content {
-  position: relative;
-  padding-bottom: 20%; }
 
 svg {
   fill: #468a3f !important; }

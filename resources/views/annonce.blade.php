@@ -11,14 +11,20 @@
     </div>
     
     @guest
-    <div> Vous devez etre connecté avant de postuler à une demande </div>
-    <a href="/login">Se connecter</a>
-    <a href="/register">Creer un compte</a>
+    <div class="not-possible">
+        <div> Vous devez etre connecté avant de postuler à une demande </div>
+        <a href="/login">Se connecter</a>
+        <a href="/register">Creer un compte</a>
+    </div>
+    @elseif(Auth::user()->role == "tondu")
+    <div class="not-possible">
+        <div> Les tondus ne peuvent pas réppondre à une annonce </div>
+        <a href="/creer-annonce">Creer une annonce</a>
+        <a href="/logout">Deconnexion</a>
+    </div>
     @else
     <a href="/reponse-postuler/{{$annonce->id}}"><button id="postuler">Postuler</button></a>
     @endguest
-    
-        
 </div>
 
 @endsection

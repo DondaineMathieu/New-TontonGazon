@@ -5,14 +5,25 @@
 <div class="main-content">
 
 @guest
-    <h1> Creer une annonce </h1>
-    <div>Vous ne pouvez pas creer d'annonce sans être connecté</div>
-    <a href="/login">Se connecter</a>
-    <a href="/register">Creer un compte</a>
+    <h1> Creer une annonce Type</h1>
+    <div class="not-possible">
+        <div>Vous ne pouvez pas creer d'annonce sans être connecté</div>
+        <a href="/login">Se connecter</a>
+        <a href="/register">Créer un compte</a>
+    </div>
+    
+@elseif(Auth::user()->role == "tondeur")
+    <div class="not-possible">
+        <div> Les tondeurs ne peuvent pas creer une annonce </div>
+        <a href="/annonces">Voir les annonces</a>
+        <a href="/logout">Deconnexion</a>
+    </div>
 @else
+    <div class="not-possible">
     @if($annonceType == false)
         <div>vous devez d'abord creer une annonce type avant de pouvoir creer une nouvelle annonce</div>
         <a href="/creer-annoncetype">Creer une annonce type</a>
+    </div>
     @else
     <div class="form-container">
         <h1> Creer une annonce </h1>
