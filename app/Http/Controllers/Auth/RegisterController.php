@@ -56,7 +56,7 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'min:6', 'confirmed'],
             'ville' => ['required', 'string', 'max:255'],
             'adresse1' => ['required', 'string', 'max:255'],
-            'adresse2' => ['string', 'max:255'],
+            'adresse2' => ['nullable','string', 'max:255'],
             'code_postal' => ['required', 'string', 'max:5'],
             'role' => ['required', 'string', 'max:255'],
         ]);
