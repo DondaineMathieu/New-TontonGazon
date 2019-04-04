@@ -28,7 +28,6 @@
                 <i> Vous êtes un professionnel </i> <br />
                 Si vous êtes un professionnel, vous êtes amené à nous communiquer un certain nombre de données personnelles 
                 telles que votre nom, prénom, adresse électronique, numéro de téléphone portable.
-                
         </li>
         <li>
                 <b> Comment les données sont utilisées ? </b> <br /> <br />

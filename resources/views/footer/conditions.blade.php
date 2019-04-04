@@ -23,7 +23,7 @@
             irrévocable et définitive de l’intégralité des Conditions Générales d'Utilisation et toute Condition 
             Particulière de la part de chacun des Utilisateurs.  Tout manquement à ces règles pourra entraîner la 
             fermeture du compte et le refus immédiat et pour le futur de l'accès à tout ou partie du Site. 
-            Ces conditions prévaudront sur toutes autres conditions générales ou particulières non expressément agréées par AlloVoisins. 
+            Ces conditions prévaudront sur toutes autres conditions générales ou particulières non expressément agréées par Tonton gazon. 
             TontonGazon se réserve la possibilité de pouvoir modifier ses conditions à tout moment, conformément aux dispositions de l’article 16 des présentes. 
         </li>
         <li>
