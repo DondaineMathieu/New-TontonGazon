@@ -1,4 +1,11 @@
 /* CSS pour PC (en dessous) */
+#menu-toogle {
+  background-color:$vert;
+  display : flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 nav.nav {
     background-color:$vert;
     display: flex;
