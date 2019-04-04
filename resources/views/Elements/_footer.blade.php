@@ -34,7 +34,7 @@
                 <li> <a href="{{ route('register') }}">Creer un compte</a>
                 @else
                 <li><a href="/utilisateur/{{ Auth::user()->id }}">Mon profil</a></li>
-                <li><a href="/utilisateur/vos-donnees/{{ Auth::user()->id }}">Accéder à mes données</a></li>
+                <li><a href="/utilisateur/vos-donnees">Accéder à mes données</a></li>
                 @endguest
             </ul>
         </div>
