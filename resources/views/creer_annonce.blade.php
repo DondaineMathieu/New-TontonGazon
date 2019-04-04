@@ -99,12 +99,7 @@
         </form>
     </div>
     @endif
-@endguest
-
-<div id="footer-img">
-        @include('Elements/_footer-img')
-    </div>
-    
+@endguest    
 </div>
 
 @endsection

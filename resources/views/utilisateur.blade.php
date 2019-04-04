@@ -10,13 +10,7 @@
         <h1>Vous etes sur votre profil </h1>
         @include("_utilisateurs-top")
         @include("_utilisateurs-options")
-    @endif
-
-
-    <div id="footer-img">
-        @include('Elements/_footer-img')
-    </div>
-    
+    @endif    
 </div>
 
 @endsection

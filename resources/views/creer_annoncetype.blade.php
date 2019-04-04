@@ -76,9 +76,6 @@
             </div>
     </form>
     @endif
-    <div id="footer-img">
-        @include('Elements/_footer-img')
-    </div>
 </div>
 
 @endsection

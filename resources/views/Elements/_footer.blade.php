@@ -1,3 +1,6 @@
+<div id="footer-img">
+    @include('Elements/_footer-img')
+</div>
 <div id="container-footer">
     <footer id="footer">
         <div id="footer-col-1">

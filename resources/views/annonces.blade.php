@@ -54,12 +54,7 @@
         @endif
     @endforeach
     </div>
-    </div>
-
-    <div id="footer-img">
-        @include('Elements/_footer-img')
-    </div>
-    
+    </div>    
 </div>
 
 @endsection

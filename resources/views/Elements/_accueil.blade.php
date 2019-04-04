@@ -113,12 +113,6 @@
             </div>
         </div> 
 --}}
-
-
-        <div id="footer-img">
-            @include('Elements/_footer-img')
-        </div>
-
         
     </div>
 </div>
@@ -154,11 +148,6 @@
             Vous avez @foreach($reponses as $r) @if($r->id_tondeur == Auth::user()->id && $r->etat == "Waiting") <div style="display:none;">{{$totalWainting=$totalWainting+1}}</div> @endif @endforeach <b>{{$totalWainting}}</b> reponses en <b>attente de reponse</b>
         </div>
     </div> 
-
-    <div id="footer-img">
-        @include('Elements/_footer-img')
-    </div>
-
 </div>
 @endguest
 </div>

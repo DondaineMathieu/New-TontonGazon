@@ -68,15 +68,12 @@ nav.nav {
 #footer-img {
   width: 100%;
   height: auto;
-  position: absolute;
-  bottom: 0;
-  left: 0; }
+  position: relative; }
   #footer-img svg {
     fill: white;
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    height: auto; }
+    height: auto;
+    display: block; }
 
 footer {
   color: white;
@@ -431,3 +428,6 @@ body {
 .main-content {
   position: relative;
   padding-bottom: 20%; }
+
+svg {
+  fill: #468a3f !important; }
