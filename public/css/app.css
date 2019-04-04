@@ -269,6 +269,33 @@ footer {
         .accueil-tondeur-container .container-reponses .list-reponses .details-reponse .reponse-choix a {
           margin-left: 4rem; }
 
+.annonce-list {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto; }
+  .annonce-list h1 {
+    text-align: center;
+    margin: 1rem 0rem; }
+  .annonce-list h2 {
+    margin: 1rem 0rem;
+    text-align: center;
+    text-decoration: underline; }
+  .annonce-list h2:hover {
+    cursor: pointer; }
+  .annonce-list .annonce-detail ul {
+    margin-bottom: 0.4rem; }
+    .annonce-list .annonce-detail ul li {
+      list-style: none; }
+      .annonce-list .annonce-detail ul li a {
+        color: black;
+        font-weight: bold; }
+  .annonce-list #list-terminees, .annonce-list #list-type {
+    display: none; }
+
+@media screen and (max-width: 640px) {
+  .annonce-list {
+    width: 80%; } }
+
 .form-container {
   width: 70%;
   padding: 2rem;
@@ -318,8 +345,7 @@ footer {
         border-radius: 10px;
         font-weight: bold;
         color: white;
-        padding: 4% 7%;
-        transition: background-color 0.4s ease-out; }
+        padding: 0.5rem 1rem; }
     .form-container form .form-reset {
       text-align: center; }
       .form-container form .form-reset a {

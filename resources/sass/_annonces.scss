@@ -1,0 +1,33 @@
+.annonce-list {
+    width: 50%;
+    margin-right:auto;
+    margin-left:auto;
+    h1{
+        text-align:center;
+        margin:1rem 0rem;
+    }
+    h2 {
+        margin:1rem 0rem;
+        text-align: center;
+        text-decoration: underline;
+    } h2:hover {cursor:pointer;}
+    .annonce-detail {
+        ul {
+            margin-bottom:0.4rem;
+            li {
+                list-style: none;
+                a {
+                    color: black;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+    #list-terminees, #list-type { display: none; }
+}
+
+@media screen and (max-width: 640px) {
+    .annonce-list {
+        width: 80%;
+    }
+}

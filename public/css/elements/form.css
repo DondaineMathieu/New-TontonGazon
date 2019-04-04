@@ -47,8 +47,7 @@
         border-radius: 10px;
         font-weight: bold;
         color: white;
-        padding: 4% 7%;
-        transition: background-color 0.4s ease-out; }
+        padding: 0.5rem 1rem; }
     .form-container form .form-reset {
       text-align: center; }
       .form-container form .form-reset a {

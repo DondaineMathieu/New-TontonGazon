@@ -29,8 +29,9 @@ class MonControlleur extends Controller
     }
 
     public function annonces() {
-        $annonces = Demande::all();
-        return view('annonces',['annonces' => $annonces]);
+        $annonces = Demande::all()->sortBy('date_tonte');
+        $date = Carbon::now();
+        return view('annonces',['annonces' => $annonces, "date" => $date]);
     }
 
     public function annonce($id) {
