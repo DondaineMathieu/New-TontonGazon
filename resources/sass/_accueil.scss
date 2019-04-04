@@ -4,11 +4,58 @@
         color:white;
         height:25rem;
         display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 4rem; 
+        grid-template-columns: 1.6fr 1fr;
+        grid-column-gap: 2rem; 
+        #left {
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-left:4rem;
+            h1 {
+                font-size:4rem;
+                margin-bottom:1rem;
+            }
+        }
+        #right {
+            position: relative;
+            a {
+                text-decoration: none;
+                font-size: 1.4rem;
+                display:inline-block;
+                margin-right: auto;
+                margin-left: auto;
+                width:auto;
+                position:absolute;
+                left:50%;
+                transform: translateX(-50%);
+            }
+            a#inscription {
+                border:3px solid white;
+                border-radius: 10px;
+                color:white;
+                padding: 0.5rem 1rem;
+                top:30%;
+            } a#voir {
+                border:3px solid $vert;
+                border-radius: 10px;
+                color:white;
+                padding: 0.5rem 1rem;
+                bottom:30%;
+            }
+        }
+    }
+
+    .accueil-container-informations {
+        .texte {
+            b {
+                text-align: center;
+            }
+            p {
+                
+            }
+        }
     }
 }
-
 
 .accueil-tondu-container {
     padding:2rem 2rem 20% 2rem;    // Haut Droite Bas Gauche

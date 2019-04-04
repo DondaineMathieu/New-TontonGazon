@@ -7,8 +7,20 @@
                 <h2> "Site de mise en relation de particulier pour la tonte de gazon" </h2>
             </div>
             <div id="right">
-                <a href="/register">S'inscrire</a>
-                <a href="/annonces">Voir les annonces</a>
+                <a id="inscription" href="/register">S'inscrire</a> <br />
+                <a id="voir" href="/annonces">Voir les annonces</a>
+            </div>
+        </div>
+        <div class="accueil-container-informations">
+            <div class="texte" id="qui-sommes-nous">
+                <b> Qui sommes-nous ? </b>
+                <p> 
+                    Tonton Gazon est un projet développé par Mathieu Dondaine et Dimitry Pierru
+                    à l'occasion d'un projet de deuxième année en DUT MMI à l'IUT de Lens.
+                    <br />
+                    Le site ne sera pas mis en ligne pour le moment mais nous allons garder le
+                    projet de coter et gagner en expérience avant de le mettre en ligne 
+                </p>
             </div>
         </div>
     </div>
