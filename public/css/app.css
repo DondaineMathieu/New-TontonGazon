@@ -159,7 +159,11 @@ footer {
 
 .accueil-guest-container .accueil-container-top {
   background: url("../img/jardin.JPG") no-repeat 100% bottom;
-  color: white; }
+  color: white;
+  height: 25rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 4rem; }
 
 .accueil-tondu-container {
   padding: 2rem 2rem 20% 2rem;
@@ -178,8 +182,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 4rem;
-    color: white;
-    min-height: 35vh; }
+    color: white; }
     .accueil-tondu-container .grid .left {
       grid-column: 1; }
       .accueil-tondu-container .grid .left .container-annonces {

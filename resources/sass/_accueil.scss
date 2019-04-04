@@ -2,12 +2,10 @@
     .accueil-container-top {
         background: url('../img/jardin.JPG') no-repeat 100% bottom;
         color:white;
-        h1 {
-
-        }
-        h2 {
-            
-        }
+        height:25rem;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 4rem; 
     }
 }
 
@@ -32,7 +30,6 @@
         grid-template-columns:1fr 1fr;
         grid-column-gap: 4rem;
         color:white;
-        min-height: 35vh;
         .left {
             grid-column: 1;
             .container-annonces {
