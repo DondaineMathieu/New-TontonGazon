@@ -4,7 +4,7 @@
         color:white;
         height:25rem;
         display:grid;
-        grid-template-columns: 1.6fr 1fr;
+        grid-template-columns: 1.4fr 1fr;
         grid-column-gap: 2rem; 
         #left {
             display:flex;
@@ -28,6 +28,7 @@
                 position:absolute;
                 left:50%;
                 transform: translateX(-50%);
+                text-align: center;
             }
             a#inscription {
                 border:3px solid white;
@@ -36,7 +37,8 @@
                 padding: 0.5rem 1rem;
                 top:30%;
             } a#voir {
-                border:3px solid $vert;
+                border:1px solid white;
+                background-color: $vert;
                 border-radius: 10px;
                 color:white;
                 padding: 0.5rem 1rem;
@@ -46,29 +48,66 @@
     }
 
     .accueil-container-informations {
+        width:70%;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: justify;
+        text-justify: inter-word;
         .texte {
-            b {
-                text-align: center;
+            margin-top:2rem;
+            div {
+                b {
+                    display:block;
+                    text-align: center;
+                    font-size: 2.6rem;
+                    margin-bottom:1rem;
+                }
             }
             p {
                 
             }
         }
+        .quelques-annonces {
+            .accueil-annonce-list {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 2rem; 
+                grid-row-gap: 1rem; 
+                .accueil-annonce-detail {
+                    ul {
+                        li {
+                            list-style: none;
+                            a {
+                                font-size:1.2rem;
+                                color:black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 
-.accueil-tondu-container {
-    padding:2rem 2rem 20% 2rem;    // Haut Droite Bas Gauche
-    position: relative;
+.accueil-tondu-bonjour {
+    color:white;
+    font-size:4rem;
     background-image:url('../img/jardin.JPG');
     background-repeat: no-repeat;
     background-position: center;
-    .accueil-tondu-bonjour {
-        color:white;
-        font-size:4rem;
+    padding:4rem;
+    .economie {
+        font-size:2rem;
     }
+}
+.accueil-tondu-container {
+    margin-top:3rem;
+    position: relative;
+    width:80%;
+    margin-left: auto;
+    margin-right:auto;
     .accueil-titre {
-        color: white;
+        color: black;
         font-weight: 600;
         font-size:3rem;
     }
@@ -76,14 +115,14 @@
         display: grid;
         grid-template-columns:1fr 1fr;
         grid-column-gap: 4rem;
-        color:white;
+        color:black;
         .left {
             grid-column: 1;
             .container-annonces {
-                border-left: solid white 4px;
+                border-left: solid black 4px;
                 padding-left: 0.75rem;
                 .annonce-solo {
-                    border-left: solid white 2px;
+                    border-left: solid black 2px;
                     padding-left: 1.5rem;
                     margin: 1rem 0 ; 
                     .titre-annonce {
@@ -94,12 +133,15 @@
                     .texte-annonce {
                         font-size: 0.8rem;
                     }
+                    .date-annonce {
+                        margin-top:0.4rem;
+                    }
                     .lien-annonce {
                         display: flex;
                         flex-direction: row-reverse;
                         padding-right:4rem;
                         a {
-                            color:white;
+                            color:black;
                             font-size:0.8rem;
                             text-decoration: none;
                             font-style: italic;
@@ -121,20 +163,20 @@
         }
     }
     .simple-text {
-        color:white;
+        color:black;
     }
     .container-reponses {
         margin-top:2rem;
         .list-reponses {
-            border-left: solid white 4px;
+            border-left: solid black 4px;
             padding-left: 0.75rem;
             .detail-reponse {
-                border-left: solid white 2px;
+                border-left: solid black 2px;
                 padding-left: 1.5rem;
                 margin: 1rem 0 ; 
-                color: white;
+                color: black;
                 a {
-                    color:white;
+                    color:black;
                     font-weight: bold;
                     text-decoration: none;
                 }
@@ -151,32 +193,39 @@
     }
 }
 
-.accueil-tondeur-container {
-    padding:2rem 2rem 20% 2rem;    // Haut Droite Bas Gauche
-    position: relative;
-    background-image:url('../img/jardin.JPG');
-    background-repeat: no-repeat;
-    background-position: center;
-    .accueil-tondeur-bonjour {
+.accueil-tondeur-bonjour {
         color:white;
         font-size:4rem;
+        background-image:url('../img/jardin.JPG');
+        background-repeat: no-repeat;
+        background-position: center;
+        padding:4rem;
+        margin-bottom:4rem;
+        .economie {
+            font-size:2rem;
+        }
     }
+.accueil-tondeur-container {
+    position: relative;
+    width:80%;
+    margin-left: auto;
+    margin-right:auto;
     .accueil-titre {
-        color: white;
+        color: black;
         font-weight: 600;
         font-size:3rem;
     }
     .container-reponses {
         .list-reponses {
-            border-left: solid white 4px;
+            border-left: solid black 4px;
             padding-left: 0.75rem;
             .details-reponse {
-                border-left: solid white 2px;
+                border-left: solid black 2px;
                 padding-left: 1.5rem;
                 margin: 1rem 0 ; 
-                color: white;
+                color: black;
                 a {
-                    color:white;
+                    color:black;
                     font-weight: bold;
                     text-decoration: none;
                 }
@@ -191,11 +240,152 @@
             }
         }
     }
+    a {
+        text-decoration: none;
+        button {
+            border:1px solid grey;
+            background-color: #468a3f;
+            border-radius: 10px;
+            font-weight: bold;
+            color:white;
+            padding: 0.5rem 1rem;
+        }
+    }
+    
 }
 
 
 
+@media screen and (max-width: 640px) {
+    .accueil-guest-container {
+        .accueil-container-top {
+            display: block;
+            height:auto;
+            padding-top:1rem;
+            padding-bottom: 3rem;
+            #left {
+                display:block;
+                padding-left:2rem;
+                h1 {
+                    font-size:3rem;
+                    margin-bottom:1rem;
+                }
+            }
+            #right {
+                a {
+                    position: relative;;
+                    margin-top: 1rem;
+                }
+                a#inscription { } a#voir { }
+            }
 
+        .accueil-container-informations {
+            width:90%;
+            .texte { div {
+                    b {
+                        font-size: 1.6rem;
+                    } }
+            }
+            .quelques-annonces {
+                display: block;
+                .accueil-annonce-list {
+                    display: block;
+                    .accueil-annonce-detail {
+                        margin-bottom: 0.6rem;
+                        ul { li { a { } } }
+                    }
+                }
+            }
+        }
+    }
+    }
+    .accueil-guest-container .accueil-container-informations .quelques-annonces .accueil-annonce-list {
+        display:block;
+        ul {
+            margin-bottom:1rem;
+        }
+    }
+
+
+    .accueil-tondu-container {
+        width:90%;
+        .accueil-titre {
+            margin-top:3rem;
+            font-size:2rem;
+        }
+        .grid {
+            display: block;
+            .left {
+                .container-annonces {
+                    border-left: solid black 4px;
+                    padding-left: 0.75rem;
+                    .annonce-solo {
+                        border-left: solid black 2px;
+                        padding-left: 1.5rem;
+                        margin: 1rem 0 ; 
+                        .titre-annonce {
+                            font-weight: bold;
+                            font-size: 1.2rem;
+                            line-height: 1.6rem;
+                        }
+                        .texte-annonce {
+                            font-size: 0.8rem;
+                        }
+                        .lien-annonce {
+                            display: flex;
+                            flex-direction: row-reverse;
+                            padding-right:4rem;
+                            a {
+                                color:black;
+                                font-size:0.8rem;
+                                text-decoration: none;
+                                font-style: italic;
+                            }
+                        } 
+                    }
+                }
+            }
+            .right {
+                margin-top:1rem;
+                .container-annoncestype {
+                    padding-left: 0rem;
+                    .annoncetype {
+                        font-size:2rem;
+                    }
+                }
+            }
+        }
+        .simple-text {
+            color:black;
+        }
+        .container-reponses {
+            margin-top:2rem;
+            .list-reponses {
+
+                .detail-reponse {
+                    border-left: solid black 2px;
+                    padding-left: 1.5rem;
+                    margin: 1rem 0 ; 
+                    color: black;
+                    a {
+                        color:black;
+                        font-weight: bold;
+                        text-decoration: none;
+                    }
+                    .reponse-choix {
+                        text-align: left;
+                        margin-top: 0.4rem;
+                        width: auto;
+                        a {
+                            margin-left: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
 
 
 

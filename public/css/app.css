@@ -162,7 +162,7 @@ footer {
   color: white;
   height: 25rem;
   display: grid;
-  grid-template-columns: 1.6fr 1fr;
+  grid-template-columns: 1.4fr 1fr;
   grid-column-gap: 2rem; }
   .accueil-guest-container .accueil-container-top #left {
     display: flex;
@@ -183,7 +183,8 @@ footer {
       width: auto;
       position: absolute;
       left: 50%;
-      transform: translateX(-50%); }
+      transform: translateX(-50%);
+      text-align: center; }
     .accueil-guest-container .accueil-container-top #right a#inscription {
       border: 3px solid white;
       border-radius: 10px;
@@ -191,40 +192,208 @@ footer {
       padding: 0.5rem 1rem;
       top: 30%; }
     .accueil-guest-container .accueil-container-top #right a#voir {
-      border: 3px solid #468a3f;
+      border: 1px solid white;
+      background-color: #468a3f;
       border-radius: 10px;
       color: white;
       padding: 0.5rem 1rem;
       bottom: 30%; }
 
-.accueil-guest-container .accueil-container-informations .texte b {
-  text-align: center; }
+.accueil-guest-container .accueil-container-informations {
+  width: 70%;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: justify;
+  text-justify: inter-word; }
+  .accueil-guest-container .accueil-container-informations .texte {
+    margin-top: 2rem; }
+    .accueil-guest-container .accueil-container-informations .texte div b {
+      display: block;
+      text-align: center;
+      font-size: 2.6rem;
+      margin-bottom: 1rem; }
+  .accueil-guest-container .accueil-container-informations .quelques-annonces .accueil-annonce-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 1rem; }
+    .accueil-guest-container .accueil-container-informations .quelques-annonces .accueil-annonce-list .accueil-annonce-detail ul li {
+      list-style: none; }
+      .accueil-guest-container .accueil-container-informations .quelques-annonces .accueil-annonce-list .accueil-annonce-detail ul li a {
+        font-size: 1.2rem;
+        color: black; }
 
-.accueil-tondu-container {
-  padding: 2rem 2rem 20% 2rem;
-  position: relative;
+.accueil-tondu-bonjour {
+  color: white;
+  font-size: 4rem;
   background-image: url("../img/jardin.JPG");
   background-repeat: no-repeat;
-  background-position: center; }
-  .accueil-tondu-container .accueil-tondu-bonjour {
-    color: white;
-    font-size: 4rem; }
+  background-position: center;
+  padding: 4rem; }
+  .accueil-tondu-bonjour .economie {
+    font-size: 2rem; }
+
+.accueil-tondu-container {
+  margin-top: 3rem;
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
   .accueil-tondu-container .accueil-titre {
-    color: white;
+    color: black;
     font-weight: 600;
     font-size: 3rem; }
   .accueil-tondu-container .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 4rem;
-    color: white; }
+    color: black; }
     .accueil-tondu-container .grid .left {
       grid-column: 1; }
       .accueil-tondu-container .grid .left .container-annonces {
-        border-left: solid white 4px;
+        border-left: solid black 4px;
         padding-left: 0.75rem; }
         .accueil-tondu-container .grid .left .container-annonces .annonce-solo {
-          border-left: solid white 2px;
+          border-left: solid black 2px;
+          padding-left: 1.5rem;
+          margin: 1rem 0; }
+          .accueil-tondu-container .grid .left .container-annonces .annonce-solo .titre-annonce {
+            font-weight: bold;
+            font-size: 1.2rem;
+            line-height: 1.6rem; }
+          .accueil-tondu-container .grid .left .container-annonces .annonce-solo .texte-annonce {
+            font-size: 0.8rem; }
+          .accueil-tondu-container .grid .left .container-annonces .annonce-solo .date-annonce {
+            margin-top: 0.4rem; }
+          .accueil-tondu-container .grid .left .container-annonces .annonce-solo .lien-annonce {
+            display: flex;
+            flex-direction: row-reverse;
+            padding-right: 4rem; }
+            .accueil-tondu-container .grid .left .container-annonces .annonce-solo .lien-annonce a {
+              color: black;
+              font-size: 0.8rem;
+              text-decoration: none;
+              font-style: italic; }
+    .accueil-tondu-container .grid .right {
+      grid-column: 2;
+      position: relative; }
+      .accueil-tondu-container .grid .right .container-annoncestype {
+        padding-left: 2rem; }
+        .accueil-tondu-container .grid .right .container-annoncestype .annoncetype {
+          font-size: 2.6rem;
+          font-weight: bold; }
+  .accueil-tondu-container .simple-text {
+    color: black; }
+  .accueil-tondu-container .container-reponses {
+    margin-top: 2rem; }
+    .accueil-tondu-container .container-reponses .list-reponses {
+      border-left: solid black 4px;
+      padding-left: 0.75rem; }
+      .accueil-tondu-container .container-reponses .list-reponses .detail-reponse {
+        border-left: solid black 2px;
+        padding-left: 1.5rem;
+        margin: 1rem 0;
+        color: black; }
+        .accueil-tondu-container .container-reponses .list-reponses .detail-reponse a {
+          color: black;
+          font-weight: bold;
+          text-decoration: none; }
+        .accueil-tondu-container .container-reponses .list-reponses .detail-reponse .reponse-choix {
+          text-align: right;
+          margin-top: 0.4rem;
+          width: 50%; }
+          .accueil-tondu-container .container-reponses .list-reponses .detail-reponse .reponse-choix a {
+            margin-left: 4rem; }
+
+.accueil-tondeur-bonjour {
+  color: white;
+  font-size: 4rem;
+  background-image: url("../img/jardin.JPG");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 4rem;
+  margin-bottom: 4rem; }
+  .accueil-tondeur-bonjour .economie {
+    font-size: 2rem; }
+
+.accueil-tondeur-container {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto; }
+  .accueil-tondeur-container .accueil-titre {
+    color: black;
+    font-weight: 600;
+    font-size: 3rem; }
+  .accueil-tondeur-container .container-reponses .list-reponses {
+    border-left: solid black 4px;
+    padding-left: 0.75rem; }
+    .accueil-tondeur-container .container-reponses .list-reponses .details-reponse {
+      border-left: solid black 2px;
+      padding-left: 1.5rem;
+      margin: 1rem 0;
+      color: black; }
+      .accueil-tondeur-container .container-reponses .list-reponses .details-reponse a {
+        color: black;
+        font-weight: bold;
+        text-decoration: none; }
+      .accueil-tondeur-container .container-reponses .list-reponses .details-reponse .reponse-choix {
+        text-align: right;
+        margin-top: 0.4rem;
+        width: 50%; }
+        .accueil-tondeur-container .container-reponses .list-reponses .details-reponse .reponse-choix a {
+          margin-left: 4rem; }
+  .accueil-tondeur-container a {
+    text-decoration: none; }
+    .accueil-tondeur-container a button {
+      border: 1px solid grey;
+      background-color: #468a3f;
+      border-radius: 10px;
+      font-weight: bold;
+      color: white;
+      padding: 0.5rem 1rem; }
+
+@media screen and (max-width: 640px) {
+  .accueil-guest-container .accueil-container-top {
+    display: block;
+    height: auto;
+    padding-top: 1rem;
+    padding-bottom: 3rem; }
+    .accueil-guest-container .accueil-container-top #left {
+      display: block;
+      padding-left: 2rem; }
+      .accueil-guest-container .accueil-container-top #left h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem; }
+    .accueil-guest-container .accueil-container-top #right a {
+      position: relative;
+      margin-top: 1rem; }
+    .accueil-guest-container .accueil-container-top .accueil-container-informations {
+      width: 90%; }
+      .accueil-guest-container .accueil-container-top .accueil-container-informations .texte div b {
+        font-size: 1.6rem; }
+      .accueil-guest-container .accueil-container-top .accueil-container-informations .quelques-annonces {
+        display: block; }
+        .accueil-guest-container .accueil-container-top .accueil-container-informations .quelques-annonces .accueil-annonce-list {
+          display: block; }
+          .accueil-guest-container .accueil-container-top .accueil-container-informations .quelques-annonces .accueil-annonce-list .accueil-annonce-detail {
+            margin-bottom: 0.6rem; }
+  .accueil-guest-container .accueil-container-informations .quelques-annonces .accueil-annonce-list {
+    display: block; }
+    .accueil-guest-container .accueil-container-informations .quelques-annonces .accueil-annonce-list ul {
+      margin-bottom: 1rem; }
+  .accueil-tondu-container {
+    width: 90%; }
+    .accueil-tondu-container .accueil-titre {
+      margin-top: 3rem;
+      font-size: 2rem; }
+    .accueil-tondu-container .grid {
+      display: block; }
+      .accueil-tondu-container .grid .left .container-annonces {
+        border-left: solid black 4px;
+        padding-left: 0.75rem; }
+        .accueil-tondu-container .grid .left .container-annonces .annonce-solo {
+          border-left: solid black 2px;
           padding-left: 1.5rem;
           margin: 1rem 0; }
           .accueil-tondu-container .grid .left .container-annonces .annonce-solo .titre-annonce {
@@ -238,72 +407,35 @@ footer {
             flex-direction: row-reverse;
             padding-right: 4rem; }
             .accueil-tondu-container .grid .left .container-annonces .annonce-solo .lien-annonce a {
-              color: white;
+              color: black;
               font-size: 0.8rem;
               text-decoration: none;
               font-style: italic; }
-    .accueil-tondu-container .grid .right {
-      grid-column: 2;
-      position: relative; }
-      .accueil-tondu-container .grid .right .container-annoncestype {
-        padding-left: 2rem; }
-        .accueil-tondu-container .grid .right .container-annoncestype .annoncetype {
-          font-size: 2.6rem;
-          font-weight: bold; }
-  .accueil-tondu-container .simple-text {
-    color: white; }
-  .accueil-tondu-container .container-reponses {
-    margin-top: 2rem; }
-    .accueil-tondu-container .container-reponses .list-reponses {
-      border-left: solid white 4px;
-      padding-left: 0.75rem; }
+      .accueil-tondu-container .grid .right {
+        margin-top: 1rem; }
+        .accueil-tondu-container .grid .right .container-annoncestype {
+          padding-left: 0rem; }
+          .accueil-tondu-container .grid .right .container-annoncestype .annoncetype {
+            font-size: 2rem; }
+    .accueil-tondu-container .simple-text {
+      color: black; }
+    .accueil-tondu-container .container-reponses {
+      margin-top: 2rem; }
       .accueil-tondu-container .container-reponses .list-reponses .detail-reponse {
-        border-left: solid white 2px;
+        border-left: solid black 2px;
         padding-left: 1.5rem;
         margin: 1rem 0;
-        color: white; }
+        color: black; }
         .accueil-tondu-container .container-reponses .list-reponses .detail-reponse a {
-          color: white;
+          color: black;
           font-weight: bold;
           text-decoration: none; }
         .accueil-tondu-container .container-reponses .list-reponses .detail-reponse .reponse-choix {
-          text-align: right;
+          text-align: left;
           margin-top: 0.4rem;
-          width: 50%; }
+          width: auto; }
           .accueil-tondu-container .container-reponses .list-reponses .detail-reponse .reponse-choix a {
-            margin-left: 4rem; }
-
-.accueil-tondeur-container {
-  padding: 2rem 2rem 20% 2rem;
-  position: relative;
-  background-image: url("../img/jardin.JPG");
-  background-repeat: no-repeat;
-  background-position: center; }
-  .accueil-tondeur-container .accueil-tondeur-bonjour {
-    color: white;
-    font-size: 4rem; }
-  .accueil-tondeur-container .accueil-titre {
-    color: white;
-    font-weight: 600;
-    font-size: 3rem; }
-  .accueil-tondeur-container .container-reponses .list-reponses {
-    border-left: solid white 4px;
-    padding-left: 0.75rem; }
-    .accueil-tondeur-container .container-reponses .list-reponses .details-reponse {
-      border-left: solid white 2px;
-      padding-left: 1.5rem;
-      margin: 1rem 0;
-      color: white; }
-      .accueil-tondeur-container .container-reponses .list-reponses .details-reponse a {
-        color: white;
-        font-weight: bold;
-        text-decoration: none; }
-      .accueil-tondeur-container .container-reponses .list-reponses .details-reponse .reponse-choix {
-        text-align: right;
-        margin-top: 0.4rem;
-        width: 50%; }
-        .accueil-tondeur-container .container-reponses .list-reponses .details-reponse .reponse-choix a {
-          margin-left: 4rem; }
+            margin-left: 2rem; } }
 
 .annonce-list {
   width: 50%;
@@ -378,7 +510,7 @@ button {
     width: 80%; } }
 
 .form-container {
-  width: 70%;
+  width: 80%;
   padding: 2rem;
   margin-right: auto;
   margin-left: auto; }
