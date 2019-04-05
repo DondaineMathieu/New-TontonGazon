@@ -1,4 +1,7 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito");
+@font-face {
+  font-family: "Aileron";
+  src: url(./css/fount/Aileron-Regular.otf) format("truetype"); }
+
 /* CSS pour PC (en dessous) */
 #menuToggle {
   display: none; }
@@ -636,6 +639,7 @@ body {
   background-color: #FFFDF0; }
 
 * {
+  font-family: "Aileron" !important;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
